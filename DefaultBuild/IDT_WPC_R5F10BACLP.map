@@ -1,0 +1,110 @@
+Renesas Optimizing Linker (W3.02.00 )             08-May-2020 17:36:24
+
+*** Options ***
+
+-subcommand=DefaultBuild\IDT_WPC_R5F10BACLP.clnk
+-Input=DefaultBuild\cstart.obj
+-Input=DefaultBuild\stkinit.obj
+-Input=DefaultBuild\r_main.obj
+-Input=DefaultBuild\r_systeminit.obj
+-Input=DefaultBuild\r_cg_cgc.obj
+-Input=DefaultBuild\r_cg_cgc_user.obj
+-Input=DefaultBuild\r_cg_port.obj
+-Input=DefaultBuild\r_cg_port_user.obj
+-Input=DefaultBuild\r_cg_serial.obj
+-Input=DefaultBuild\r_cg_serial_user.obj
+-Input=DefaultBuild\r_cg_timer.obj
+-Input=DefaultBuild\r_cg_timer_user.obj
+-Input=DefaultBuild\buzzer_task.obj
+-Input=DefaultBuild\led_task.obj
+-Input=DefaultBuild\power_sw_task.obj
+-Input=DefaultBuild\door_task.obj
+-Input=DefaultBuild\trunk_task.obj
+-Input=DefaultBuild\acc_task.obj
+-Input=DefaultBuild\wpc_application.obj
+-Input=DefaultBuild\p9261_read_task.obj
+-Input=DefaultBuild\r_cg_wdt.obj
+-Input=DefaultBuild\r_cg_wdt_user.obj
+-Input=DefaultBuild\wpc_normal_mode.obj
+-Input=DefaultBuild\wpc_shutdown_mode.obj
+-Input=DefaultBuild\wpc_sleep_mode.obj
+-Input=DefaultBuild\wpc_eut_sleep.obj
+-Input=DefaultBuild\wpc_abnormal_alarm.obj
+-Input=DefaultBuild\idt_analog_ping_task.obj
+-Input=DefaultBuild\idt_calibration_task.obj
+-Input=DefaultBuild\idt_configuration_task.obj
+-Input=DefaultBuild\idt_digital_ping_task.obj
+-Input=DefaultBuild\idt_id_confirmation_task.obj
+-Input=DefaultBuild\idt_identification_task.obj
+-Input=DefaultBuild\idt_idle_task.obj
+-Input=DefaultBuild\idt_negotiation_task.obj
+-Input=DefaultBuild\idt_power_transfer_init_task.obj
+-Input=DefaultBuild\idt_power_transfer_task.obj
+-Input=DefaultBuild\idt_q_measurement_task.obj
+-Input=DefaultBuild\idt_re_negotiation_task.obj
+-Input=DefaultBuild\idt_remove_power_task.obj
+-Input=DefaultBuild\idt_restart_task.obj
+-Input=DefaultBuild\idt_rx_removed_detection_task.obj
+-Input=DefaultBuild\idt_startup_task.obj
+-Input=DefaultBuild\idt_p9261_tx_status_process.obj
+-SECURITY_ID=00000000000000000000
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10BAG.DVF
+-DEBug
+-NOCOmpress
+-NOOPtimize
+-OUtput=DefaultBuild\IDT_WPC_R5F10BACLP.abs
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.09.00\lib\rl78em4s.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.09.00\lib\malloc_n.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.09.00\lib\rl78em4r.lib
+-OCDBG=84
+-DEBUG_MONITOR=1FE00-1FFFF
+-USER_OPT_BYTE=F9FFE8
+-OCDTR
+-LISt=DefaultBuild\IDT_WPC_R5F10BACLP.map
+-AUTO_SECTION_LAYOUT
+-ROm=.data=.dataR
+-ROm=.sdata=.sdataR
+-NOMessage
+-MEMory=High
+-NOLOgo
+-end
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+.vect
+                                  00000000  0000007f        80   0
+.constf
+                                  00000080  00000080         0   2
+.sdata
+                                  00000080  00000080         0   2
+.option_byte
+                                  000000c0  000000c3         4   1
+.security_id
+                                  000000c4  000000cd         a   1
+.RLIB
+                                  000000c4  000000c4         0   1
+.SLIB
+                                  000000c4  000000c4         0   1
+.monitor1
+                                  000000ce  000000d7         a   1
+.data
+                                  000000d8  00000116        3f   2
+.text
+                                  00000117  000003a1       28b   1
+.const
+                                  00002000  00002000         0   2
+.textf
+                                  00002000  00004ac9      2aca   1
+.monitor2
+                                  0001fe00  0001ffff       200   1
+.bss
+                                  000fe500  000fe56b        6c   2
+.dataR
+                                  000fe56c  000fe5aa        3f   2
+.sbss
+                                  000ffe20  000ffe20         0   2
+.sdataR
+                                  000ffe20  000ffe20         0   2

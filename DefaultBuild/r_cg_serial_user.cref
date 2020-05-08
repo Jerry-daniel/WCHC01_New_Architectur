@@ -1,0 +1,260 @@
+****r_cg_serial_user.c
+v2 
+:1572074251
+#1
+F "__DI" N I!1 T!2 ?18-2 
+T "void" KBV I!2 0x0 
+F "__EI" N I!3 T!2 ?19-2 
+F "__halt" N I!4 T!2 ?20-2 
+F "__stop" N I!5 T!2 ?21-2 
+F "__brk" N I!6 T!2 ?22-2 
+F "__nop" N I!7 T!2 ?23-2 
+F "__rolb" N I!8 T!9 ?25-2 P!10 P!11 
+T "unsigned char" KBU I!9 0x1 
+V "" N I!10 O!8 T!9 .1 0x1 
+V "" N I!11 O!8 T!9 .1 0x1 
+F "__rorb" N I!12 T!9 ?26-2 P!13 P!14 
+V "" N I!13 O!12 T!9 .1 0x1 
+V "" N I!14 O!12 T!9 .1 0x1 
+F "__rolw" N I!15 T!16 ?27-2 P!17 P!18 
+T "unsigned int" KBU I!16 0x2 
+V "" N I!17 O!15 T!16 .2 0x2 
+V "" N I!18 O!15 T!9 .1 0x1 
+F "__rorw" N I!19 T!16 ?28-2 P!20 P!21 
+V "" N I!20 O!19 T!16 .2 0x2 
+V "" N I!21 O!19 T!9 .1 0x1 
+F "__mulu" N I!22 T!16 ?30-2 P!23 P!24 
+V "" N I!23 O!22 T!9 .1 0x1 
+V "" N I!24 O!22 T!9 .1 0x1 
+F "__mului" N I!25 T!26 ?32-2 P!27 P!28 
+T "unsigned long" KBU I!26 0x4 
+V "" N I!27 O!25 T!16 .2 0x2 
+V "" N I!28 O!25 T!16 .2 0x2 
+F "__mulsi" N I!29 T!30 ?33-2 P!31 P!33 
+T "long" KBS I!30 0x4 
+V "" N I!31 O!29 T!32 .2 0x2 
+T "int" KBS I!32 0x2 
+V "" N I!33 O!29 T!32 .2 0x2 
+F "_COM_mulul" F I!34 T!35 ?42-2 P!36 P!37 
+T "unsigned long long" KBU I!35 0x8 
+V "" N I!36 O!34 T!26 .2 0x4 
+V "" N I!37 O!34 T!26 .2 0x4 
+F "_COM_mulsl" F I!38 T!39 ?43-2 P!40 P!41 
+T "long long" KBS I!39 0x8 
+V "" N I!40 O!38 T!30 .2 0x4 
+V "" N I!41 O!38 T!30 .2 0x4 
+F "_COM_divui" F I!42 T!16 ?48-2 P!43 P!44 
+V "" N I!43 O!42 T!16 .2 0x2 
+V "" N I!44 O!42 T!9 .1 0x1 
+F "_COM_divul" F I!45 T!26 ?49-2 P!46 P!47 
+V "" N I!46 O!45 T!26 .2 0x4 
+V "" N I!47 O!45 T!16 .2 0x2 
+F "_COM_remui" F I!48 T!9 ?53-2 P!49 P!50 
+V "" N I!49 O!48 T!16 .2 0x2 
+V "" N I!50 O!48 T!9 .1 0x1 
+F "_COM_remul" F I!51 T!16 ?54-2 P!52 P!53 
+V "" N I!52 O!51 T!26 .2 0x4 
+V "" N I!53 O!51 T!16 .2 0x2 
+F "_COM_macui" F I!54 T!26 ?58-2 P!55 P!56 P!57 
+V "" N I!55 O!54 T!16 .2 0x2 
+V "" N I!56 O!54 T!16 .2 0x2 
+V "" N I!57 O!54 T!26 .2 0x4 
+F "_COM_macsi" F I!58 T!30 ?59-2 P!59 P!60 P!61 
+V "" N I!59 O!58 T!32 .2 0x2 
+V "" N I!60 O!58 T!32 .2 0x2 
+V "" N I!61 O!58 T!30 .2 0x4 
+F "__get_psw" N I!62 T!9 ?63-2 
+F "__set_psw" N I!63 T!2 ?64-2 P!64 
+V "" N I!64 O!63 T!9 .1 0x1 
+F "__set1" N I!65 T!2 ?66-2 P!66 P!68 
+V "" N I!66 O!65 T!67 .2 0x2 
+T "" KP I!67 T!9 0x2 
+V "" N I!68 O!65 T!9 .1 0x1 
+F "__clr1" N I!69 T!2 ?67-2 P!70 P!71 
+V "" N I!70 O!69 T!67 .2 0x2 
+V "" N I!71 O!69 T!9 .1 0x1 
+F "__not1" N I!72 T!2 ?68-2 P!73 P!74 
+V "" N I!73 O!72 T!67 .2 0x2 
+V "" N I!74 O!72 T!9 .1 0x1 
+T "" KS I!75 !39-4 0x1 VM!76 VM!77 VM!78 VM!79 VM!80 VM!81 VM!82 VM!83 
+V "no0" - I!76 O!75 T!9 !40-4 .1 0x1 BO0 BIS1 
+V "no1" - I!77 O!75 T!9 !41-4 .1 0x1 BO1 BIS1 
+V "no2" - I!78 O!75 T!9 !42-4 .1 0x1 BO2 BIS1 
+V "no3" - I!79 O!75 T!9 !43-4 .1 0x1 BO3 BIS1 
+V "no4" - I!80 O!75 T!9 !44-4 .1 0x1 BO4 BIS1 
+V "no5" - I!81 O!75 T!9 !45-4 .1 0x1 BO5 BIS1 
+V "no6" - I!82 O!75 T!9 !46-4 .1 0x1 BO6 BIS1 
+V "no7" - I!83 O!75 T!9 !47-4 .1 0x1 BO7 BIS1 
+T "__bitf_T" KT I!84 T!75 !48-4 0x1 
+T "" KS I!85 !51-4 0x2 VM!86 VM!87 VM!88 VM!89 VM!90 VM!91 VM!92 VM!93 VM!94 VM!95 VM!96 VM!97 VM!98 VM!99 VM!100 VM!101 
+V "no0" - I!86 O!85 T!9 !52-4 .1 0x1 BO0 BIS1 
+V "no1" - I!87 O!85 T!9 !53-4 .1 0x1 BO1 BIS1 
+V "no2" - I!88 O!85 T!9 !54-4 .1 0x1 BO2 BIS1 
+V "no3" - I!89 O!85 T!9 !55-4 .1 0x1 BO3 BIS1 
+V "no4" - I!90 O!85 T!9 !56-4 .1 0x1 BO4 BIS1 
+V "no5" - I!91 O!85 T!9 !57-4 .1 0x1 BO5 BIS1 
+V "no6" - I!92 O!85 T!9 !58-4 .1 0x1 BO6 BIS1 
+V "no7" - I!93 O!85 T!9 !59-4 .1 0x1 BO7 BIS1 
+V "no8" - I!94 O!85 T!9 !60-4 .1 0x1 BO8 BIS1 
+V "no9" - I!95 O!85 T!9 !61-4 .1 0x1 BO9 BIS1 
+V "no10" - I!96 O!85 T!9 !62-4 .1 0x1 BO10 BIS1 
+V "no11" - I!97 O!85 T!9 !63-4 .1 0x1 BO11 BIS1 
+V "no12" - I!98 O!85 T!9 !64-4 .1 0x1 BO12 BIS1 
+V "no13" - I!99 O!85 T!9 !65-4 .1 0x1 BO13 BIS1 
+V "no14" - I!100 O!85 T!9 !66-4 .1 0x1 BO14 BIS1 
+V "no15" - I!101 O!85 T!9 !67-4 .1 0x1 BO15 BIS1 
+T "__bitf_T2" KT I!102 T!85 !68-4 0x2 
+T "int8_t" KT I!103 T!104 !75-3 0x1 
+T "signed char" KBS I!104 0x1 
+T "uint8_t" KT I!105 T!9 !76-3 0x1 
+T "int16_t" KT I!106 T!107 !77-3 0x2 
+T "short" KBS I!107 0x2 
+T "uint16_t" KT I!108 T!109 !78-3 0x2 
+T "unsigned short" KBU I!109 0x2 
+T "int32_t" KT I!110 T!30 !79-3 0x4 
+T "uint32_t" KT I!111 T!26 !80-3 0x4 
+T "MD_STATUS" KT I!112 T!109 !81-3 0x2 
+F "R_SAU0_Create" F I!113 T!2 ?263-5 
+F "R_IIC00_Create" F I!114 T!2 ?264-5 
+F "R_IIC00_Master_Send" F I!115 T!2 ?265-5 303-1 P!116 P!117 P!119 
+V "" N I!116 O!115 T!105 .1 0x1 
+V "" ON I!117 O!115 T!118 .2 0x2 
+T "" KP I!118 T!105 0x2 
+V "" N I!119 O!115 T!108 .2 0x2 
+F "R_IIC00_Master_Receive" F I!120 T!2 ?266-5 317-1 P!121 P!122 P!123 
+V "" N I!121 O!120 T!105 .1 0x1 
+V "" ON I!122 O!120 T!118 .2 0x2 
+V "" N I!123 O!120 T!108 .2 0x2 
+F "R_IIC00_Stop" F I!124 T!2 ?267-5 
+F "R_IIC00_StartCondition" F I!125 T!2 ?268-5 
+F "R_IIC00_StopCondition" F I!126 T!2 ?269-5 89-1 126-1 151-1 
+F "r_iic00_callback_master_error" SF I!127 T!2 #146-1 !147,154-1-1 ?270-5 70-1 74-1 P!234 
+F "r_iic00_callback_master_receiveend" SF I!129 T!2 #161-1 !162,306-1-1 ?271-5 127-1 
+F "r_iic00_callback_master_sendend" SF I!130 T!2 #314-1 !315,319-1-1 ?272-5 90-1 152-1 
+T "P9261_IIC_FLAG" KS I!131 !19-6 0x1 VM!132 VM!133 VM!134 VM!135 
+V "read_P9261_reg_flag" - I!132 O!131 T!9 !21-6 .1 0x1 BO0 BIS1 
+V "iic_send_end_flag" - I!133 O!131 T!9 !22-6 .1 0x1 BO1 BIS1 
+V "iic_receiver_end_flag" - I!134 O!131 T!9 !23-6 #278-1 #298-1 301-1 .1 0x1 BO2 BIS1 
+V "reserved_flag" - I!135 O!131 T!9 !24-6 .1 0x1 BO3 BIS5 
+V "P9261_IIC_State" GN I!136 T!131 ?26-6 #278-1 #298-1 301-1 .1 0x1 
+T "" KE I!137 T!138 0x1 EM0:"STATE_startup" EM1:"STATE_idle" EM2:"STATE_analog_ping" EM3:"STATE_q_measurement" EM4:"STATE_digital_ping" EM5:"STATE_wpc_identificantion" EM6:"STATE_rx_removed_detection" EM7:"STATE_wpc_configuration" EM8:"STATE_power_transfer_initialization" EM9:"STATE_power_transfer_state" EM10:"STATE_id_confirmation" EM11:"STATE_remove_power" EM12:"STATE_restart" EM13:"STATE_wpc_negotiation" EM14:"unknow_state" EM15:"STATE_wpc_re_negotiation" EM16:"STATE_calibration" 
+T "char" KBCU I!138 0x1 
+T "P9261_TRANSMITTER_STATE" KT I!139 T!137 !49-6 0x1 
+V "P9261_TX_STATE_MSG" GN I!140 T!139 ?50-6 #167-1 .1 0x1 
+T "" KE I!141 T!138 0x1 EM0:"STATUS_ok" EM1:"STATUS_qfod_alarm" EM2:"STATUS_charge_complete_rx_ept_code" EM3:"unknow_status" EM4:"STATUS_no_response_rx_ept_code" EM5:"STATUS_internal_fault_rx_ept_code" EM6:"STATUS_over_temperature_rx_ept_code" EM7:"STATUS_over_current_rx_ept_code" EM8:"STATUS_full_charged" EM9:"STATUS_other_end_of_power_reason_rx_ept_code" EM10:"STATUS_negotiation_failed" EM11:"STATUS_control_error_packet_timeout" EM12:"STATUS_received_power_packet_timeout" EM13:"STATUS_tnext_timing_violation" EM14:"STATUS_packet_defect_during_id_config" EM15:"STATUS_lllegal_packet_during_power_transfer" EM16:"STATUS_tx_extern_over_temperature_limit" EM17:"STATUS_tx_over_voltage_limit" EM18:"STATUS_tx_die_temperature_over_limit" EM19:"STATUS_lllegal_packet_during_id_config" EM20:"STATUS_tx_under_voltage_limit" EM21:"STATUS_wireless_charger_off" EM22:"STATUS_peps_interrupted" EM23:"STATUS_standby" EM24:"STATUS_power_loss_fod_alarm" EM25:"STATUS_open_fod_alarm" EM26:"STATUS_tx_overcurrent_alarm" EM27:"STATUS_rx_jiggle_alarm" 
+T "P9261_TRANSMITTER_STATUS" KT I!142 T!141 !84-6 0x1 
+V "P9261_TX_STATUS_MSG" GN I!143 T!142 ?85-6 #175-1 .1 0x1 
+T "" KE I!144 T!138 0x1 EM0:"COMBINED_over_temperature_threshold" EM1:"COMBINED_over_voltage_threshold" EM2:"COMBINED_over_power_from_rx" EM3:"COMBINED_open_fod" EM4:"COMBINED_real_fod" EM5:"COMBINED_charge_complete_from_rx" EM6:"COMBINED_peps_alarm" EM7:"COMBINED_can_message_on_off" EM8:"COMBINED_charging" EM9:"COMBINED_standby" EM10:"COMBINED_under_voltage_threshold" 
+T "P9261_COMBINED_STATUS_VALUE" KT I!145 T!144 !102-6 0x1 
+V "P9261_COMBINED_MSG" GN I!146 T!145 ?103-6 #183-1 .1 0x1 
+T "P9261_COMBINED_MESSAGE" KS I!147 !107-6 0x1 VM!148 VM!149 VM!150 VM!151 VM!152 VM!153 
+V "In_Charge_complete_From_Rx" - I!148 O!147 T!9 !109-6 .1 0x1 BO0 BIS1 
+V "In_Charging" - I!149 O!147 T!9 !110-6 .1 0x1 BO1 BIS1 
+V "In_Standby" - I!150 O!147 T!9 !111-6 .1 0x1 BO2 BIS1 
+V "In_Open_FOD" - I!151 O!147 T!9 !112-6 .1 0x1 BO3 BIS1 
+V "In_Ploss_FOD" - I!152 O!147 T!9 !113-6 .1 0x1 BO4 BIS1 
+V "Reserved_Status" - I!153 O!147 T!9 !114-6 .1 0x1 BO5 BIS3 
+V "P9261_CombinedMessage" GN I!154 T!147 ?116-6 .1 0x1 
+T "P9261_STATE_MESSAGE" KS I!155 !121-6 0x4 VM!156 VM!157 VM!158 VM!159 VM!160 VM!161 VM!162 VM!163 VM!164 VM!165 VM!166 VM!167 VM!168 VM!169 VM!170 VM!171 VM!172 VM!173 VM!174 VM!175 VM!176 VM!177 VM!178 VM!179 VM!180 VM!181 
+V "Startup_Status" - I!156 O!155 T!26 !123-6 .2 0x4 BO0 BIS1 
+V "Idle_Status" - I!157 O!155 T!26 !124-6 .2 0x4 BO1 BIS1 
+V "Analog_Ping_Status" - I!158 O!155 T!26 !125-6 .2 0x4 BO2 BIS1 
+V "Q_Measurement_Status" - I!159 O!155 T!26 !126-6 .2 0x4 BO3 BIS1 
+V "Digital_Ping_Status" - I!160 O!155 T!26 !127-6 .2 0x4 BO4 BIS1 
+V "Identification_Status" - I!161 O!155 T!26 !128-6 .2 0x4 BO5 BIS1 
+V "Rx_Removed_Detection_Status" - I!162 O!155 T!26 !129-6 .2 0x4 BO6 BIS1 
+V "Configuration_Status" - I!163 O!155 T!26 !130-6 .2 0x4 BO7 BIS1 
+V "Power_Transfer_Init_Status" - I!164 O!155 T!26 !131-6 .2 0x4 BO8 BIS1 
+V "Power_Transfer_Status" - I!165 O!155 T!26 !132-6 .2 0x4 BO9 BIS1 
+V "Id_Confirmation_Status" - I!166 O!155 T!26 !133-6 .2 0x4 BO10 BIS1 
+V "Remove_Power_Status" - I!167 O!155 T!26 !134-6 .2 0x4 BO11 BIS1 
+V "Restart_Status" - I!168 O!155 T!26 !135-6 .2 0x4 BO12 BIS1 
+V "Negotiation_Status" - I!169 O!155 T!26 !136-6 .2 0x4 BO13 BIS1 
+V "Unknow_Status" - I!170 O!155 T!26 !137-6 .2 0x4 BO14 BIS1 
+V "Re_Negotiation_Status" - I!171 O!155 T!26 !138-6 .2 0x4 BO15 BIS1 
+V "Calibration_Status" - I!172 O!155 T!26 !139-6 .2 0x4 BO16 BIS1 
+V "Q_Fod_Alarm_Status" - I!173 O!155 T!26 !141-6 .2 0x4 BO17 BIS1 
+V "Open_Fod_Alarm_Status" - I!174 O!155 T!26 !142-6 .2 0x4 BO18 BIS1 
+V "Power_Loss_Fod_Alarm_Status" - I!175 O!155 T!26 !143-6 .2 0x4 BO19 BIS1 
+V "Other_End_Of_Power_Rx_Alarm_Status" - I!176 O!155 T!26 !144-6 .2 0x4 BO20 BIS1 
+V "Charge_Complete_From_Rx_Status" - I!177 O!155 T!26 !145-6 .2 0x4 BO21 BIS1 
+V "Full_Chargeed_Status" - I!178 O!155 T!26 !146-6 .2 0x4 BO22 BIS1 
+V "Rx_Jiggle_Alarm_Status" - I!179 O!155 T!26 !147-6 .2 0x4 BO23 BIS1 
+V "Over_Temperature_Alarm_Status" - I!180 O!155 T!26 !148-6 .2 0x4 BO24 BIS1 
+V "Reserved_Status" - I!181 O!155 T!26 !149-6 .2 0x4 BO25 BIS7 
+V "P9261_RegMessage" GN I!182 T!155 ?151-6 .2 0x4 
+T "" KS I!183 !157-6 0xa VM!184 VM!185 VM!186 VM!187 VM!188 VM!189 VM!190 
+V "COIL_NUMBER" V I!184 O!183 T!9 !158-6 .1 0x1 BO0 BIS8 
+V "TX_STATE_MESSAGE" V I!185 O!183 T!9 !159-6 #166-1 167-1 .1 0x1 BO8 BIS8 
+V "TX_STATUS_MESSAGE" V I!186 O!183 T!9 !160-6 #174-1 175-1 .1 0x1 BO16 BIS8 
+V "COMBINED_MESSAGE" V I!187 O!183 T!9 !161-6 #182-1 183-1 .1 0x1 BO24 BIS8 
+V "NTC_ADC_OUT" V I!188 O!183 T!9 !162-6 #197-1 #207-1 #292-1 198-1 208-1 293-1 .1 0x1 BO32 BIS8 
+V "COIL_Q_MESSAGE" V I!189 O!183 T!16 !163-6 #216-1 #217-1 #224-1 #232-1 #233-1 #240-1 #248-1 #249-1 #256-1 217-1 224-1 225-1 233-1 240-1 241-1 249-1 256-1 257-1 .2 0x2 BO48 BIS16 
+V "COIL_CURRENT" V I!190 O!183 T!16 !164-6 #265-1 #266-1 #273-1 266-1 273-1 274-1 .2 0x2 BO64 BIS16 
+T "P9261_REG_STATE" KT I!191 T!183 !165-6 0xa 
+V "P9261_Reg_State" GN I!192 T!191 ?166-6 #166-1 #174-1 #182-1 #197-1 #207-1 #216-1 #217-1 #224-1 #232-1 #233-1 #240-1 #248-1 #249-1 #256-1 #265-1 #266-1 #273-1 #292-1 167-1 175-1 183-1 198-1 208-1 217-1 224-1 225-1 233-1 240-1 241-1 249-1 256-1 257-1 266-1 273-1 274-1 293-1 .2 0xa 
+V "P9261_NTC_ADC_OUT" GN I!193 T!16 ?172-6 #209-1 #294-1 .2 0x2 
+V "COIL_1_Q_Message" GN I!194 T!16 ?173-6 #225-1 .2 0x2 
+V "COIL_2_Q_Message" GN I!195 T!16 ?174-6 #241-1 .2 0x2 
+V "COIL_3_Q_Message" GN I!196 T!16 ?175-6 #257-1 .2 0x2 
+V "COIL_Current" GN I!197 T!16 ?176-6 #274-1 .2 0x2 
+V "Last_COIL_Current" GN I!198 T!16 ?177-6 .2 0x2 
+V "P9261_Message" GN I!199 T!9 ?178-6 166-1 174-1 182-1 197-1 207-1 216-1 224-1 232-1 240-1 248-1 256-1 265-1 273-1 292-1 317-1 .1 0x1 
+V "P9261_Address" GN I!200 T!201 ?179-6 #168-1 #169-1 #176-1 #177-1 #184-1 #185-1 #200-1 #201-1 #210-1 #211-1 #218-1 #219-1 #226-1 #227-1 #234-1 #235-1 #242-1 #243-1 #250-1 #251-1 #258-1 #259-1 #267-1 #268-1 #275-1 #276-1 #295-1 #296-1 303-1 .1 0x2 
+T "" KA2 I!201 T!9 0x2 
+V "P9261_IIC_FLOW" GN I!202 T!9 ?180-6 #170-1 #178-1 #186-1 #202-1 #212-1 #220-1 #228-1 #236-1 #244-1 #252-1 #260-1 #269-1 #277-1 #297-1 164-1 172-1 180-1 195-1 205-1 214-1 222-1 230-1 238-1 246-1 254-1 263-1 271-1 290-1 .1 0x1 
+V "P9261_IIC_State_Flag_address" GN I!203 T!204 ?181-6 .2 0x2 
+T "" KP I!204 T!16 0x2 
+V "P9261_Combined_Flag_address" GN I!205 T!204 ?182-6 .2 0x2 
+V "P9261_RegMessage_Flag_address" GN I!206 T!204 ?183-6 .2 0x2 
+F "Receive_P9261_Tx_State_Task" F I!207 T!2 ?187-6 P!208 
+V "" N I!208 O!207 T!9 .1 0x1 
+F "Receive_P9261_Tx_Status_Task" F I!209 T!2 ?188-6 P!210 
+V "" N I!210 O!209 T!9 .1 0x1 
+F "Receive_P9261_Combined_Msg_Task" F I!211 T!2 ?189-6 P!212 
+V "" N I!212 O!211 T!9 .1 0x1 
+F "Read_P9261_Register_Message" F I!213 T!2 ?190-6 
+F "P9261_Reg_State_Update" F I!214 T!2 ?191-6 
+F "I2C_Commumication_Start" F I!215 T!2 ?192-6 
+F "Clear_P9261_IIC_State_Flag" F I!216 T!9 ?193-6 P!217 
+V "" N I!217 O!216 T!218 .2 0x2 
+T "" MOD"C" KP I!218 T!26 0x2 
+F "Clear_P9261_Combined_State_Flag" F I!219 T!9 ?194-6 P!220 
+V "" N I!220 O!219 T!218 .2 0x2 
+F "Clear_P9261_RegMessage_State_Flag" F I!221 T!9 ?195-6 P!222 
+V "" N I!222 O!221 T!218 .2 0x2 
+V "g_iic00_master_status_flag" GVN I!223 T!105 ?49-1 #102-1 79-1 96-1 102-1 .1 0x1 
+V "gp_iic00_tx_address" GN I!224 T!225 ?50-1 #84-1 83-1 84-1 .2 0x2 
+T "" MOD"V" KP I!225 T!105 0x2 
+V "g_iic00_tx_count" GVN I!226 T!108 ?51-1 #85-1 #149-1 68-1 72-1 81-1 85-1 .2 0x2 
+V "gp_iic00_rx_address" GN I!227 T!225 ?52-1 #116-1 115-1 116-1 .2 0x2 
+V "g_iic00_rx_count" GVN I!228 T!108 ?53-1 #117-1 113-1 117-1 119-1 124-1 .2 0x2 
+V "g_iic00_rx_length" GVN I!229 T!108 ?54-1 104-1 113-1 119-1 124-1 .2 0x2 
+V "ntc_adc_tmp" GN I!230 T!16 !56-1 #198-1 #199-1 #208-1 #293-1 199-1 208-1 209-1 293-1 294-1 .2 0x2 
+V "coil_q_tmp" GN I!231 T!16 !57-1 .2 0x2 
+F "r_iic00_interrupt" SNI I!232 T!2 #66-1 !67,137-1-1 
+V "flag" N I!234 O!127 T!112 !146-1 .2 0x2 
+****%CxSystemPath%\inc\builtin.h
+v2 
+:1572074251
+#2
+****r_cg_macrodriver.h
+v2 
+:1572074251
+#3
+****iodefine.h
+v2 
+:1572074251
+#4
+****r_cg_serial.h
+v2 
+:1572074251
+#5
+****P9261_Read_Task\h\p9261_read_task.h
+v2 
+:1572074251
+#6
+****r_cg_userdefine.h
+v2 
+:1572074251
+#7

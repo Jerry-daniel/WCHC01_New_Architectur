@@ -1,0 +1,365 @@
+****r_cg_timer_user.c
+v2 
+:1572074252
+#1
+F "__DI" N I!1 T!2 ?18-2 
+T "void" KBV I!2 0x0 
+F "__EI" N I!3 T!2 ?19-2 
+F "__halt" N I!4 T!2 ?20-2 
+F "__stop" N I!5 T!2 ?21-2 
+F "__brk" N I!6 T!2 ?22-2 
+F "__nop" N I!7 T!2 ?23-2 
+F "__rolb" N I!8 T!9 ?25-2 P!10 P!11 
+T "unsigned char" KBU I!9 0x1 
+V "" N I!10 O!8 T!9 .1 0x1 
+V "" N I!11 O!8 T!9 .1 0x1 
+F "__rorb" N I!12 T!9 ?26-2 P!13 P!14 
+V "" N I!13 O!12 T!9 .1 0x1 
+V "" N I!14 O!12 T!9 .1 0x1 
+F "__rolw" N I!15 T!16 ?27-2 P!17 P!18 
+T "unsigned int" KBU I!16 0x2 
+V "" N I!17 O!15 T!16 .2 0x2 
+V "" N I!18 O!15 T!9 .1 0x1 
+F "__rorw" N I!19 T!16 ?28-2 P!20 P!21 
+V "" N I!20 O!19 T!16 .2 0x2 
+V "" N I!21 O!19 T!9 .1 0x1 
+F "__mulu" N I!22 T!16 ?30-2 P!23 P!24 
+V "" N I!23 O!22 T!9 .1 0x1 
+V "" N I!24 O!22 T!9 .1 0x1 
+F "__mului" N I!25 T!26 ?32-2 P!27 P!28 
+T "unsigned long" KBU I!26 0x4 
+V "" N I!27 O!25 T!16 .2 0x2 
+V "" N I!28 O!25 T!16 .2 0x2 
+F "__mulsi" N I!29 T!30 ?33-2 P!31 P!33 
+T "long" KBS I!30 0x4 
+V "" N I!31 O!29 T!32 .2 0x2 
+T "int" KBS I!32 0x2 
+V "" N I!33 O!29 T!32 .2 0x2 
+F "_COM_mulul" F I!34 T!35 ?42-2 P!36 P!37 
+T "unsigned long long" KBU I!35 0x8 
+V "" N I!36 O!34 T!26 .2 0x4 
+V "" N I!37 O!34 T!26 .2 0x4 
+F "_COM_mulsl" F I!38 T!39 ?43-2 P!40 P!41 
+T "long long" KBS I!39 0x8 
+V "" N I!40 O!38 T!30 .2 0x4 
+V "" N I!41 O!38 T!30 .2 0x4 
+F "_COM_divui" F I!42 T!16 ?48-2 P!43 P!44 
+V "" N I!43 O!42 T!16 .2 0x2 
+V "" N I!44 O!42 T!9 .1 0x1 
+F "_COM_divul" F I!45 T!26 ?49-2 P!46 P!47 
+V "" N I!46 O!45 T!26 .2 0x4 
+V "" N I!47 O!45 T!16 .2 0x2 
+F "_COM_remui" F I!48 T!9 ?53-2 P!49 P!50 
+V "" N I!49 O!48 T!16 .2 0x2 
+V "" N I!50 O!48 T!9 .1 0x1 
+F "_COM_remul" F I!51 T!16 ?54-2 P!52 P!53 
+V "" N I!52 O!51 T!26 .2 0x4 
+V "" N I!53 O!51 T!16 .2 0x2 
+F "_COM_macui" F I!54 T!26 ?58-2 P!55 P!56 P!57 
+V "" N I!55 O!54 T!16 .2 0x2 
+V "" N I!56 O!54 T!16 .2 0x2 
+V "" N I!57 O!54 T!26 .2 0x4 
+F "_COM_macsi" F I!58 T!30 ?59-2 P!59 P!60 P!61 
+V "" N I!59 O!58 T!32 .2 0x2 
+V "" N I!60 O!58 T!32 .2 0x2 
+V "" N I!61 O!58 T!30 .2 0x4 
+F "__get_psw" N I!62 T!9 ?63-2 
+F "__set_psw" N I!63 T!2 ?64-2 P!64 
+V "" N I!64 O!63 T!9 .1 0x1 
+F "__set1" N I!65 T!2 ?66-2 P!66 P!68 
+V "" N I!66 O!65 T!67 .2 0x2 
+T "" KP I!67 T!9 0x2 
+V "" N I!68 O!65 T!9 .1 0x1 
+F "__clr1" N I!69 T!2 ?67-2 P!70 P!71 
+V "" N I!70 O!69 T!67 .2 0x2 
+V "" N I!71 O!69 T!9 .1 0x1 
+F "__not1" N I!72 T!2 ?68-2 P!73 P!74 
+V "" N I!73 O!72 T!67 .2 0x2 
+V "" N I!74 O!72 T!9 .1 0x1 
+T "" KS I!75 !39-4 0x1 VM!76 VM!77 VM!78 VM!79 VM!80 VM!81 VM!82 VM!83 
+V "no0" - I!76 O!75 T!9 !40-4 .1 0x1 BO0 BIS1 
+V "no1" - I!77 O!75 T!9 !41-4 .1 0x1 BO1 BIS1 
+V "no2" - I!78 O!75 T!9 !42-4 .1 0x1 BO2 BIS1 
+V "no3" - I!79 O!75 T!9 !43-4 .1 0x1 BO3 BIS1 
+V "no4" - I!80 O!75 T!9 !44-4 .1 0x1 BO4 BIS1 
+V "no5" - I!81 O!75 T!9 !45-4 #105-1 105-1 .1 0x1 BO5 BIS1 
+V "no6" - I!82 O!75 T!9 !46-4 .1 0x1 BO6 BIS1 
+V "no7" - I!83 O!75 T!9 !47-4 .1 0x1 BO7 BIS1 
+T "__bitf_T" KT I!84 T!75 !48-4 0x1 
+T "" KS I!85 !51-4 0x2 VM!86 VM!87 VM!88 VM!89 VM!90 VM!91 VM!92 VM!93 VM!94 VM!95 VM!96 VM!97 VM!98 VM!99 VM!100 VM!101 
+V "no0" - I!86 O!85 T!9 !52-4 .1 0x1 BO0 BIS1 
+V "no1" - I!87 O!85 T!9 !53-4 .1 0x1 BO1 BIS1 
+V "no2" - I!88 O!85 T!9 !54-4 .1 0x1 BO2 BIS1 
+V "no3" - I!89 O!85 T!9 !55-4 .1 0x1 BO3 BIS1 
+V "no4" - I!90 O!85 T!9 !56-4 .1 0x1 BO4 BIS1 
+V "no5" - I!91 O!85 T!9 !57-4 .1 0x1 BO5 BIS1 
+V "no6" - I!92 O!85 T!9 !58-4 .1 0x1 BO6 BIS1 
+V "no7" - I!93 O!85 T!9 !59-4 .1 0x1 BO7 BIS1 
+V "no8" - I!94 O!85 T!9 !60-4 .1 0x1 BO8 BIS1 
+V "no9" - I!95 O!85 T!9 !61-4 .1 0x1 BO9 BIS1 
+V "no10" - I!96 O!85 T!9 !62-4 .1 0x1 BO10 BIS1 
+V "no11" - I!97 O!85 T!9 !63-4 .1 0x1 BO11 BIS1 
+V "no12" - I!98 O!85 T!9 !64-4 .1 0x1 BO12 BIS1 
+V "no13" - I!99 O!85 T!9 !65-4 .1 0x1 BO13 BIS1 
+V "no14" - I!100 O!85 T!9 !66-4 .1 0x1 BO14 BIS1 
+V "no15" - I!101 O!85 T!9 !67-4 .1 0x1 BO15 BIS1 
+T "__bitf_T2" KT I!102 T!85 !68-4 0x2 
+T "int8_t" KT I!103 T!104 !75-3 0x1 
+T "signed char" KBS I!104 0x1 
+T "uint8_t" KT I!105 T!9 !76-3 0x1 
+T "int16_t" KT I!106 T!107 !77-3 0x2 
+T "short" KBS I!107 0x2 
+T "uint16_t" KT I!108 T!109 !78-3 0x2 
+T "unsigned short" KBU I!109 0x2 
+T "int32_t" KT I!110 T!30 !79-3 0x4 
+T "uint32_t" KT I!111 T!26 !80-3 0x4 
+T "MD_STATUS" KT I!112 T!109 !81-3 0x2 
+T "" KE I!113 T!114 0x1 EM0:"TMCHANNELA" EM1:"TMCHANNELB" EM2:"TMCHANNELC" EM3:"TMCHANNELD" EM4:"TMCHANNELELC" 
+T "char" KBCU I!114 0x1 
+T "timer_channel_t" KT I!115 T!113 !1028-5 0x1 
+F "R_TAU0_Create" F I!116 T!2 ?1033-5 
+F "R_TAU0_Channel0_Start" F I!117 T!2 ?1034-5 
+F "R_TAU0_Channel0_Stop" F I!118 T!2 ?1035-5 
+F "R_TAU0_Channel1_Start" F I!119 T!2 ?1036-5 
+F "R_TAU0_Channel1_Stop" F I!120 T!2 ?1037-5 
+T "" KE I!121 T!114 0x1 EM0:"IDT_WPC_STARTUP_TASK" EM1:"IDT_WPC_IDLE_TASK" EM2:"IDT_WPC_ANALOG_PING_TASK" EM3:"IDT_WPC_Q_MEASUREMENT_TASK" EM4:"IDT_WPC_DIGITAL_PING_TASK" EM5:"IDT_WPC_IDENTIFICATION_TASK" EM6:"IDT_WPC_RX_REMOVED_DETECTION_TASK" EM7:"IDT_WPC_CONFIGURATION_TASK" EM8:"IDT_WPC_POWER_TRANSFER_INIT_TASK" EM9:"IDT_WCP_POWER_TRANSFER_TASK" EM10:"IDT_WPC_ID_CONFIRMATION_TASK" EM11:"IDT_WPC_REMOVE_POWER_TASK" EM12:"IDT_WPC_RESTART_TASK" EM13:"IDT_WPC_NEGOTIATION_TASK" EM14:"IDT_UNKNOW" EM15:"IDT_WPC_RE_NEGOTIATION_TASK" EM16:"IDT_WPC_CALIBRATION_TASK" EM17:"IDT_WPC_FOD_ALARM_TASK" EM18:"IDT_WPC_POWER_SW_OFF_TASK" EM19:"IDT_WPC_CELLPHONE_LEFT_ALERT_TASK" EM20:"IDT_WPC_ACC_OFF_TASK" EM21:"IDT_WPC_EUT_SLEEP_TASK" EM22:"IDT_WPC_OVERTEMPERATURE_TASK" EM23:"IDT_WPC_RX_JIGGLE_ALARM_TASK" EM24:"IDT_WPC_OTHER_EOF_PWR_RX_ALARM_TASK" 
+T "IDT_WPC_STATE_TASK" KT I!122 T!121 !48-6 0x1 
+V "IDT_WPC_TASK_NUM" GN I!123 T!122 ?49-6 .1 0x1 
+T "WPC_FUNCTION_STATUS_FLAG" KS I!124 !68-6 0x1 VM!125 VM!126 VM!127 VM!128 VM!129 VM!130 VM!131 VM!132 
+V "B_Plus_On_Flag" - I!125 O!124 T!9 !70-6 .1 0x1 BO0 BIS1 
+V "ACC_On_Flag" - I!126 O!124 T!9 !71-6 .1 0x1 BO1 BIS1 
+V "EUT_Wait_Time_Flag" - I!127 O!124 T!9 !72-6 88-1 .1 0x1 BO2 BIS1 
+V "ACC_Off_Dly3_5T_Flag" - I!128 O!124 T!9 !73-6 89-1 .1 0x1 BO3 BIS1 
+V "Phone_Forget_Flag" - I!129 O!124 T!9 !74-6 .1 0x1 BO4 BIS1 
+V "Alarm_Continuous_Flag" - I!130 O!124 T!9 !75-6 .1 0x1 BO5 BIS1 
+V "Temperature_Detect_Start_Flag" - I!131 O!124 T!9 !76-6 .1 0x1 BO6 BIS1 
+V "IDT_Program_Debug_Mode_Flag" - I!132 O!124 T!9 !77-6 73-1 .1 0x1 BO7 BIS1 
+V "WPC_Function_Status" GN I!133 T!124 ?79-6 73-1 88-1 89-1 .1 0x1 
+T "WPC_OTHER_ALARM_STATUS_FLAG" KS I!134 !84-6 0x1 VM!135 VM!136 VM!137 
+V "Other_Eof_Pwr_Rx_Alarm_Status_Flag" - I!135 O!134 T!9 !86-6 .1 0x1 BO0 BIS1 
+V "Rx_Jiggle_Status_Flag" - I!136 O!134 T!9 !87-6 .1 0x1 BO1 BIS1 
+V "Reserved" - I!137 O!134 T!9 !88-6 .1 0x1 BO2 BIS6 
+V "Other_Alarm" GN I!138 T!134 ?90-6 .1 0x1 
+T "IDT_WPC_FLAG" KS I!139 !95-6 0x6 VM!140 VM!141 VM!142 VM!143 VM!144 VM!145 VM!146 VM!147 VM!148 VM!149 VM!150 VM!151 VM!152 VM!153 VM!154 VM!155 VM!156 VM!157 VM!158 VM!159 VM!160 VM!161 VM!162 VM!163 VM!164 
+V "Startup_Task_Flag" - I!140 O!139 T!26 !97-6 .2 0x4 BO0 BIS1 
+V "Idle_Task_Flag" - I!141 O!139 T!26 !98-6 .2 0x4 BO1 BIS1 
+V "Analog_Ping_Task_Flag" - I!142 O!139 T!26 !99-6 .2 0x4 BO2 BIS1 
+V "Q_Measurement_Task_Flag" - I!143 O!139 T!26 !100-6 .2 0x4 BO3 BIS1 
+V "Digital_Ping_Task_Flag" - I!144 O!139 T!26 !101-6 .2 0x4 BO4 BIS1 
+V "Identification_Task_Flag" - I!145 O!139 T!26 !102-6 .2 0x4 BO5 BIS1 
+V "Rx_Removed_Detection_Task_Flag" - I!146 O!139 T!26 !103-6 .2 0x4 BO6 BIS1 
+V "Configuration_Task_Flag" - I!147 O!139 T!26 !104-6 .2 0x4 BO7 BIS1 
+V "Power_Transfer_Init_Task_Flag" - I!148 O!139 T!26 !105-6 .2 0x4 BO8 BIS1 
+V "Power_Transfer_Task_Flag" - I!149 O!139 T!26 !106-6 .2 0x4 BO9 BIS1 
+V "Id_Confirmation_Task_Flag" - I!150 O!139 T!26 !107-6 .2 0x4 BO10 BIS1 
+V "Remove_Power_Task_Flag" - I!151 O!139 T!26 !108-6 .2 0x4 BO11 BIS1 
+V "Restart_Task_Flag" - I!152 O!139 T!26 !109-6 .2 0x4 BO12 BIS1 
+V "Negotiation_Task_Flag" - I!153 O!139 T!26 !110-6 .2 0x4 BO13 BIS1 
+V "Re_Negotiation_Task_Flag" - I!154 O!139 T!26 !111-6 .2 0x4 BO14 BIS1 
+V "Calibration_Task_Flag" - I!155 O!139 T!26 !112-6 .2 0x4 BO15 BIS1 
+V "Fod_Alarm_Task_Flag" - I!156 O!139 T!26 !114-6 .2 0x4 BO16 BIS1 
+V "Power_Sw_Off_Task_Flag" - I!157 O!139 T!26 !115-6 .2 0x4 BO17 BIS1 
+V "Cellphone_Left_Alert_Task_Flag" - I!158 O!139 T!26 !116-6 .2 0x4 BO18 BIS1 
+V "Acc_Off_Task_Flag" - I!159 O!139 T!26 !117-6 .2 0x4 BO19 BIS1 
+V "EUT_Sleep_Task_Flag" - I!160 O!139 T!26 !118-6 .2 0x4 BO20 BIS1 
+V "Over_Temperature_Alarm_Task_Flag" - I!161 O!139 T!26 !119-6 .2 0x4 BO21 BIS1 
+V "Rx_Jiggle_Alarm_Task_Flag" - I!162 O!139 T!26 !120-6 .2 0x4 BO22 BIS1 
+V "Other_Eof_Pwr_Rx_Alarm_Task_Flag" - I!163 O!139 T!26 !121-6 .2 0x4 BO23 BIS1 
+V "Reserved_Flag" - I!164 O!139 T!26 !122-6 .2 0x4 BO24 BIS9 
+V "IDT_WPC_State" GN I!165 T!139 ?124-6 .2 0x6 
+V "Door_Close_Waitting_Time" GN I!166 T!16 ?129-6 .2 0x2 
+V "EUT_Waitting_Time" GN I!167 T!16 ?130-6 #88-1 88-1 88-1 .2 0x2 
+V "ACC_Off_Reset_Time" GN I!168 T!16 ?131-6 #89-1 89-1 89-1 .2 0x2 
+V "Over_Temperature_Reset_Time" GN I!169 T!16 ?132-6 #90-1 90-1 90-1 .2 0x2 
+V "IDT_WPC_TASK" GVN I!170 T!9 ?133-6 .1 0x1 
+V "IDT_WPC_NEXT_TASK" GVN I!171 T!9 ?134-6 .1 0x1 
+V "IDT_WPC_State_address" GN I!172 T!173 ?135-6 .2 0x2 
+T "" KP I!173 T!16 0x2 
+V "WPC_Function_State_Flag_address" GN I!174 T!173 ?136-6 .2 0x2 
+F "IDT_WPC_Startup_Task" F I!175 T!2 ?140-6 
+F "IDT_WPC_Idle_Task" F I!176 T!2 ?141-6 
+F "IDT_WPC_Analog_Ping_Task" F I!177 T!2 ?142-6 
+F "IDT_WPC_Q_Measurement_Task" F I!178 T!2 ?143-6 
+F "IDT_WPC_Digital_Ping_Task" F I!179 T!2 ?144-6 
+F "IDT_WPC_Identification_Task" F I!180 T!2 ?145-6 
+F "IDT_WPC_Rx_Removed_Detection_Task" F I!181 T!2 ?146-6 
+F "IDT_WPC_Configuration_Task" F I!182 T!2 ?147-6 
+F "IDT_WPC_Power_Transfer_Init_Task" F I!183 T!2 ?148-6 
+F "IDT_WCP_Power_Transfer_Task" F I!184 T!2 ?149-6 
+F "IDT_WPC_Id_Confirmation_Task" F I!185 T!2 ?150-6 
+F "IDT_WPC_Remove_Power_Task" F I!186 T!2 ?151-6 
+F "IDT_WPC_Restart_Task" F I!187 T!2 ?152-6 
+F "IDT_WPC_Negotiation_Task" F I!188 T!2 ?153-6 
+F "IDT_Unknow" F I!189 T!2 ?154-6 
+F "IDT_WPC_Re_Negotiation_Task" F I!190 T!2 ?155-6 
+F "IDT_WPC_Calibration_Task" F I!191 T!2 ?156-6 
+F "IDT_FOD_Alarm_Task" F I!192 T!2 ?157-6 
+F "IDT_Power_Sw_Off_Task" F I!193 T!2 ?158-6 
+F "IDT_Cellphone_Left_Alert_Task" F I!194 T!2 ?159-6 
+F "IDT_ACC_Off_Task" F I!195 T!2 ?160-6 
+F "IDT_EUT_Sleep_Task" F I!196 T!2 ?161-6 
+F "IDT_Temperature_Alarm_Task" F I!197 T!2 ?162-6 
+F "IDT_RX_Jiggle_Alarm_Task" F I!198 T!2 ?163-6 
+F "IDT_Other_Eof_Pwr_Rx_Alarm_Task" F I!199 T!2 ?164-6 
+F "IDT_WPC_Processer_Task" F I!200 T!2 ?166-6 
+F "WPC_System_Initial" F I!201 T!2 ?167-6 
+F "IO_Interface_Init" F I!202 T!2 ?168-6 
+F "Variable_Init" F I!203 T!2 ?169-6 
+F "P9261_Reg_Msg_Init" F I!204 T!2 ?170-6 
+F "I2C_Variable_Init" F I!205 T!2 ?171-6 
+F "Phone_Placement_Detect" F I!206 T!2 ?172-6 
+F "OverTemperature_Detect" F I!207 T!2 ?173-6 
+F "Clear_IDT_WPC_State_Flag" F I!208 T!9 ?174-6 P!209 
+V "" N I!209 O!208 T!210 .2 0x2 
+T "" MOD"C" KP I!210 T!26 0x2 
+F "Clear_WPC_Function_State_Flag" F I!211 T!9 ?175-6 P!212 
+V "" N I!212 O!211 T!210 .2 0x2 
+T "ACC_STATUS_FLAG" KS I!213 !26-7 0x1 VM!214 VM!215 
+V "Active_On_Flag" - I!214 O!213 T!9 !28-7 .1 0x1 BO0 BIS1 
+V "reserved_flag" - I!215 O!213 T!9 !29-7 .1 0x1 BO1 BIS7 
+V "ACC_Status" GN I!216 T!213 ?31-7 .1 0x1 
+V "ACC_DeBounce_Time" GN I!217 T!16 ?35-7 .2 0x2 
+V "ACC_State_Flag_address" GN I!218 T!173 ?36-7 .2 0x2 
+F "ACC_Detection" F I!219 T!2 ?40-7 77-1 
+F "Clear_ACC_State_Flag" F I!220 T!9 ?41-7 P!221 
+V "" N I!221 O!220 T!210 .2 0x2 
+T "BUZZER_STATUS_FLAG" KS I!222 !26-8 0x2 VM!223 VM!224 VM!225 VM!226 VM!227 VM!228 VM!229 VM!230 VM!231 VM!232 VM!233 VM!234 VM!235 
+V "Error_Buzzer_Trigger_Flag" - I!223 O!222 T!16 !28-8 .2 0x2 BO0 BIS1 
+V "Forget_Buzzer_Tigger_Flag" - I!224 O!222 T!16 !29-8 .2 0x2 BO1 BIS1 
+V "PWM_Go_Flag" - I!225 O!222 T!16 !30-8 105-1 .2 0x2 BO2 BIS1 
+V "Charge_Start_Flag" - I!226 O!222 T!16 !31-8 82-1 .2 0x2 BO3 BIS1 
+V "Charge_Complete_Flag" - I!227 O!222 T!16 !32-8 83-1 .2 0x2 BO4 BIS1 
+V "Alarm_En_Flag" - I!228 O!222 T!16 !33-8 .2 0x2 BO5 BIS1 
+V "Error_Alarm_Active_Flag" - I!229 O!222 T!16 !34-8 84-1 .2 0x2 BO6 BIS1 
+V "Forget_Alarm_Active_Flag" - I!230 O!222 T!16 !35-8 85-1 .2 0x2 BO7 BIS1 
+V "Active_End_Flag" - I!231 O!222 T!16 !36-8 .2 0x2 BO8 BIS1 
+V "Cycle_Delay_Start_Flag" - I!232 O!222 T!16 !37-8 .2 0x2 BO9 BIS1 
+V "Cycle_Delay_End_Flag" - I!233 O!222 T!16 !38-8 .2 0x2 BO10 BIS1 
+V "Buzzer_Working_End_Flag" - I!234 O!222 T!16 !39-8 .2 0x2 BO11 BIS1 
+V "reserved_Flag" - I!235 O!222 T!16 !40-8 .2 0x2 BO12 BIS4 
+V "Buzzer_State" GN I!236 T!222 ?42-8 82-1 83-1 84-1 85-1 105-1 .2 0x2 
+V "Buzzer_On_Time" GN I!237 T!16 ?47-8 .2 0x2 
+V "Buzzer_Off_Time" GN I!238 T!16 ?48-8 .2 0x2 
+V "Buzzer_Cycle_Delay_Time" GN I!239 T!16 ?49-8 .2 0x2 
+V "Buzzer_Active_Cycle_Time" GN I!240 T!9 ?50-8 .1 0x1 
+V "Buzzer_State_Flag_address" GN I!241 T!173 ?51-8 .2 0x2 
+F "Error_Alarm_Buzzer_Task" F I!242 T!2 ?55-8 84-1 
+F "PhoneForger_Buzzer_Task" F I!243 T!2 ?56-8 85-1 
+F "Buzzer_Disable" F I!244 T!2 ?57-8 
+F "Charge_Starting_Buzzer_Out" F I!245 T!2 ?59-8 
+F "Charge_Starting_Buzzer_Task" F I!246 T!2 ?60-8 82-1 
+F "Charger_Complete_Buzzer_Out" F I!247 T!2 ?62-8 
+F "Charger_Complete_Buzzer_Task" F I!248 T!2 ?63-8 83-1 
+F "Error_State_Buzzer_Out" F I!249 T!2 ?65-8 
+F "Error_Buzzer_Update" F I!250 T!2 ?66-8 
+F "Buzzer_Cycle_Delay" F I!251 T!2 ?67-8 91-1 
+F "Error_Buzzer_Alarm_Event" F I!252 T!2 ?68-8 
+F "PhoneForger_Buzzer_Alarm_Event" F I!253 T!2 ?69-8 
+F "PhoneForget_Buzzer_Out" F I!254 T!2 ?71-8 
+F "PhoneForger_Buzzer_Update" F I!255 T!2 ?72-8 
+F "Clear_Buzzer_State_Flag" F I!256 T!9 ?74-8 P!257 
+V "" N I!257 O!256 T!210 .2 0x2 
+T "LED_STATUS_FLAG" KS I!258 !56-9 0x1 VM!259 VM!260 VM!261 VM!262 VM!263 VM!264 
+V "Error_LED_Trigger_Flag" - I!259 O!258 T!9 !58-9 .1 0x1 BO0 BIS1 
+V "Alarm_LED_En_Flag" - I!260 O!258 T!9 !59-9 .1 0x1 BO1 BIS1 
+V "Alarm_LED_Active_Flag" - I!261 O!258 T!9 !60-9 86-1 .1 0x1 BO2 BIS1 
+V "Alarm_LED_Active_End_Flag" - I!262 O!258 T!9 !61-9 .1 0x1 BO3 BIS1 
+V "LED_Working_End_Flag" - I!263 O!258 T!9 !62-9 .1 0x1 BO4 BIS1 
+V "reserved_Flag" - I!264 O!258 T!9 !63-9 .1 0x1 BO5 BIS3 
+V "LED_Status" GN I!265 T!258 ?65-9 86-1 .1 0x1 
+V "led_time" GN I!266 T!16 ?70-9 #79-1 79-1 79-1 .2 0x2 
+V "LED_On_Time" GN I!267 T!16 ?71-9 .2 0x2 
+V "LED_Off_Time" GN I!268 T!16 ?72-9 .2 0x2 
+V "LED_Flash_Duty" GN I!269 T!9 ?73-9 .1 0x1 
+V "Led_State_Flag_address" GN I!270 T!173 ?74-9 .2 0x2 
+F "Error_LED_Update" F I!271 T!2 ?78-9 
+F "Error_LED_Flash_Out" F I!272 T!2 ?79-9 
+F "Error_LED_Flash_Task" F I!273 T!2 ?80-9 86-1 
+F "Error_LED_Alarm_Event" F I!274 T!2 ?81-9 
+F "Alarm_LED_Disable" F I!275 T!2 ?82-9 
+F "IDT_Monitor_Mode_LED" F I!276 T!2 ?83-9 
+F "Clear_Led_State_Flag" F I!277 T!9 ?84-9 P!278 
+V "" N I!278 O!277 T!210 .2 0x2 
+T "POWER_SW_FLAG" KS I!279 !26-10 0x1 VM!280 VM!281 VM!282 VM!283 VM!284 VM!285 
+V "Last_Edge_State" - I!280 O!279 T!9 !28-10 .1 0x1 BO0 BIS1 
+V "Negative_Edge_State" - I!281 O!279 T!9 !29-10 .1 0x1 BO1 BIS1 
+V "Negative_Edge_Detect_End_Flag" - I!282 O!279 T!9 !30-10 .1 0x1 BO2 BIS1 
+V "Low_Level_Hold_Flag" - I!283 O!279 T!9 !31-10 .1 0x1 BO3 BIS1 
+V "Active_Flag" - I!284 O!279 T!9 !32-10 .1 0x1 BO4 BIS1 
+V "reserved_flag" - I!285 O!279 T!9 !33-10 .1 0x1 BO5 BIS3 
+V "Power_Sw" GN I!286 T!279 ?35-10 .1 0x1 
+V "Power_Sw_Hold_Time" GN I!287 T!16 ?39-10 .2 0x2 
+V "Power_Sw_State_Flag_address" GN I!288 T!173 ?40-10 .2 0x2 
+F "Power_Sw_Detection" F I!289 T!2 ?44-10 75-1 
+F "Clear_Power_Sw_State_Flag" F I!290 T!9 ?45-10 P!291 
+V "" N I!291 O!290 T!210 .2 0x2 
+T "DOOR_STATUS_FLAG" KS I!292 !26-11 0x1 VM!293 VM!294 VM!295 
+V "Door_Open_Flag" - I!293 O!292 T!9 !28-11 .1 0x1 BO0 BIS1 
+V "Last_Door_State_Chk_Flag" - I!294 O!292 T!9 !29-11 .1 0x1 BO1 BIS1 
+V "reserved_flag" - I!295 O!292 T!9 !30-11 .1 0x1 BO2 BIS6 
+V "Door_Status" GN I!296 T!292 ?32-11 .1 0x1 
+V "Door_Open_Keep_Time" GN I!297 T!9 ?37-11 .1 0x1 
+V "Door_Close_Keep_Time" GN I!298 T!9 ?38-11 .1 0x1 
+V "Door_State_Flag_address" GN I!299 T!173 ?39-11 .2 0x2 
+F "Door_En_Detection" F I!300 T!2 ?43-11 71-1 
+F "Clear_Door_State_Flag" F I!301 T!9 ?44-11 P!302 
+V "" N I!302 O!301 T!210 .2 0x2 
+T "TRUNK_STATUS_FLAG" KS I!303 !26-12 0x1 VM!304 VM!305 
+V "Trunk_Open_Flag" - I!304 O!303 T!9 !28-12 .1 0x1 BO0 BIS1 
+V "reserved_flag" - I!305 O!303 T!9 !29-12 .1 0x1 BO1 BIS7 
+V "Trunk_Status" GN I!306 T!303 ?31-12 .1 0x1 
+V "Trunk_State_Change_Time" GN I!307 T!16 ?36-12 .2 0x2 
+V "Trunk_State_Flag_address" GN I!308 T!173 ?37-12 .2 0x2 
+F "Trunk_En_Detection" F I!309 T!2 ?41-12 72-1 
+F "Clear_Trunk_State_Flag" F I!310 T!9 ?42-12 P!311 
+V "" N I!311 O!310 T!210 .2 0x2 
+F "r_tau0_channel0_interrupt" SNI I!312 T!2 #65-1 !66,94-1-1 
+F "r_tau0_channel1_interrupt" SNI I!313 T!2 #102-1 !103,107-1-1 
+****%CxSystemPath%\inc\builtin.h
+v2 
+:1572074252
+#2
+****r_cg_macrodriver.h
+v2 
+:1572074252
+#3
+****iodefine.h
+v2 
+:1572074252
+#4
+****r_cg_timer.h
+v2 
+:1572074252
+#5
+****WPC_Application\h\wpc_application.h
+v2 
+:1572074252
+#6
+****ACC_Task\h\acc_task.h
+v2 
+:1572074252
+#7
+****Buzzer_Task\h\buzzer_task.h
+v2 
+:1572074252
+#8
+****LED_Task\h\led_task.h
+v2 
+:1572074252
+#9
+****Power_Sw_Task\h\power_sw_task.h
+v2 
+:1572074252
+#10
+****Door_Task\h\door_task.h
+v2 
+:1572074252
+#11
+****Trunk_Task\h\trunk_task.h
+v2 
+:1572074252
+#12
+****r_cg_userdefine.h
+v2 
+:1572074252
+#13
