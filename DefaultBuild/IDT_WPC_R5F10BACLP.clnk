@@ -43,7 +43,7 @@
 -Input=DefaultBuild\idt_startup_task.obj
 -Input=DefaultBuild\idt_p9261_tx_status_process.obj
 -SECURITY_ID=00000000000000000000
--DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10BAG.DVF
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10BAC.DVF
 -DEBug
 -NOCOmpress
 -NOOPtimize
@@ -52,9 +52,8 @@
 -LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.09.00\lib\malloc_n.lib
 -LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.09.00\lib\rl78em4r.lib
 -OCDBG=84
--DEBUG_MONITOR=1FE00-1FFFF
+-DEBUG_MONITOR=7E00-7FFF
 -USER_OPT_BYTE=F9FFE8
--OCDTR
 -LISt=DefaultBuild\IDT_WPC_R5F10BACLP.map
 -AUTO_SECTION_LAYOUT
 -ROm=.data=.dataR
@@ -64,7 +63,7 @@
 -NOLOgo
 -end
 -Input=DefaultBuild\IDT_WPC_R5F10BACLP.abs
--DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10BAG.DVF
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10BAC.DVF
 -OUtput=DefaultBuild\IDT_WPC_R5F10BACLP.mot
 -FOrm=Stype
 -NOMessage

@@ -262,24 +262,29 @@ void WPC_System_Initial(void)
 ***********************************************************************************************************************/
 void Phone_Placement_Detect(void)
 {
-	if((P9261_CombinedMessage.In_Charge_complete_From_Rx==TRUE)||(P9261_CombinedMessage.In_Charging==TRUE))
+	if(WPC_Function_Status.Charge_Load_In_Tx_Flag==TRUE)
 	{
-		//WPC_Function_Status.Phone_Forget_Flag = TRUE;
+		Buzzer_State.Forget_Buzzer_Tigger_Flag = TRUE;
+	}
+	else
+	{
+		Buzzer_State.Forget_Buzzer_Tigger_Flag = FALSE;
+	}
+	/*if((P9261_CombinedMessage.In_Charging==TRUE)||((Last_P9261_Tx_Status_Code==0x02)&&(P9261_CombinedMessage.In_Charge_complete_From_Rx==TRUE)))
+	{
 		Buzzer_State.Forget_Buzzer_Tigger_Flag = TRUE;
 	}
 	else
 	{
 		if((Last_P9261_Tx_State_Code==0x09)||(Last_P9261_Tx_Status_Code==0x02))
 		{
-			//WPC_Function_Status.Phone_Forget_Flag = TRUE;
 			Buzzer_State.Forget_Buzzer_Tigger_Flag = TRUE;
 		}
 		else
 		{
-			//WPC_Function_Status.Phone_Forget_Flag = FALSE;
 			Buzzer_State.Forget_Buzzer_Tigger_Flag = FALSE;
 		}
-	}
+	}*/
 }
 /***********************************************************************************************************************
 * Function Name: IDT_WPC_Processer_Task
@@ -293,6 +298,7 @@ void IDT_WPC_Processer_Task(void)
 	{
 		OverTemperature_Detect();
 		IDT_P9261_TX_Status_Processer();	// any abnormal status check function //
+		ChargeLoan_In_Tx_Check();		//20200511//
 		switch(IDT_WPC_TASK)
 		{
 			//---------------------------------------------------------------------------------------------------------//
@@ -619,6 +625,31 @@ void OpenFOD_Alarm_Active_Detect(void)
 			}
 		}
 	}*/
+}
+/***********************************************************************************************************************
+* Function Name: ChargeLoan_In_Tx_Check
+* Description  : This function is ChargeLoan_In_Tx_Check function.
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+void ChargeLoan_In_Tx_Check(void)
+{
+	if((P9261_Reg_State.TX_STATE_MESSAGE==0x09)&&(P9261_Reg_State.COMBINED_MESSAGE==0x08))
+	{
+		WPC_Function_Status.Charge_Load_In_Tx_Flag = TRUE;
+	}
+	else if((P9261_Reg_State.TX_STATUS_MESSAGE==0x08)&&(P9261_Reg_State.COMBINED_MESSAGE==0x08))
+	{
+		WPC_Function_Status.Charge_Load_In_Tx_Flag = TRUE;
+	}
+	else if((P9261_Reg_State.TX_STATUS_MESSAGE==0x02)&&(P9261_Reg_State.COMBINED_MESSAGE==0x05))
+	{
+		WPC_Function_Status.Charge_Load_In_Tx_Flag = TRUE;
+	}
+	else
+	{
+		WPC_Function_Status.Charge_Load_In_Tx_Flag = FALSE;
+	}
 }
 /***********************************************************************************************************************
 * Function Name: IDT_Unknow

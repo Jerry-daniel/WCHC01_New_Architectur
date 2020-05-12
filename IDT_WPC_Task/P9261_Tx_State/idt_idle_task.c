@@ -42,7 +42,7 @@ void IDT_WPC_Idle_Task(void)
 	if(IDT_WPC_State.Idle_Task_Flag==TRUE)
 	{
 		IDT_WPC_State.Idle_Task_Flag = FALSE;
-		Last_P9261_Tx_Status_Code = P9261_Reg_State.TX_STATUS_MESSAGE;
+		//Last_P9261_Tx_Status_Code = P9261_Reg_State.TX_STATUS_MESSAGE;
 		IDT_WPC_TASK = IDT_WPC_IDLE_TASK;
 	}
 	IDT_WPC_TASK = IDT_WPC_Idle_Process();

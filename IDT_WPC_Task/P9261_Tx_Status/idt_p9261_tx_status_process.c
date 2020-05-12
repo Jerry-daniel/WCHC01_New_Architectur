@@ -35,7 +35,7 @@ variables define
 #ifdef _OPENFOD_LONG_TIME_
 	#define FOD_COUNT			3//5
 #else
-	#define FOD_COUNT			4//3
+	#define FOD_COUNT			6//3
 #endif
 /***********************************************************************************************************************
 Locate variables and functions
@@ -205,7 +205,7 @@ void IDT_P9261_TX_Status_Processer(void)
 	else
 	{
 		Clear_Abnormal_Event_Flag(&Abnormal_Event);	
-		Last_P9261_Tx_Status_Code = P9261_Reg_State.TX_STATUS_MESSAGE;
+		//Last_P9261_Tx_Status_Code = P9261_Reg_State.TX_STATUS_MESSAGE;
 		
 		if(WPC_Function_Status.First_Open_FOD_Flag==TRUE)
 		{

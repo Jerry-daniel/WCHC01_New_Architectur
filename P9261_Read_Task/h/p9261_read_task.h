@@ -256,8 +256,8 @@ Global variables
 extern unsigned char 	Read_Next_Register_Delay_Time;
 extern unsigned char 	COIL_DETECT;
 extern unsigned char 	LAST_COIL;
-extern unsigned char	Last_P9261_Tx_State_Code;
-extern unsigned char 	Last_P9261_Tx_Status_Code;
+//extern unsigned char	Last_P9261_Tx_State_Code;
+//extern unsigned char 	Last_P9261_Tx_Status_Code;
 extern unsigned int		P9261_NTC_ADC_OUT;
 extern unsigned int 	COIL_1_Q_Message;
 extern unsigned int 	COIL_2_Q_Message;

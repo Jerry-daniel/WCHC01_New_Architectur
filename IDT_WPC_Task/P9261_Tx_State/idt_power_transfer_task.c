@@ -50,7 +50,7 @@ void IDT_WCP_Power_Transfer_Task(void)
 		Reset_Buzzer_LED_State();
 		Charge_Starting_Buzzer_Out();
 		CHARGE_LED_ON;
-		Last_P9261_Tx_State_Code = P9261_Reg_State.TX_STATE_MESSAGE;
+		//Last_P9261_Tx_State_Code = P9261_Reg_State.TX_STATE_MESSAGE;
 		//TEST_TP2 = 1;
 		//----------------------------------------------//
 		IDT_WPC_TASK = IDT_WCP_POWER_TRANSFER_TASK;
@@ -382,7 +382,7 @@ void Rx_Status_Detecting(void)
 	if(IDT_WPC_NEXT_TASK!=IDT_WCP_POWER_TRANSFER_TASK)
 	{
 		CHARGE_STATE_LED_OFF;
-		Last_P9261_Tx_State_Code = P9261_Reg_State.TX_STATE_MESSAGE;
+		//Last_P9261_Tx_State_Code = P9261_Reg_State.TX_STATE_MESSAGE;
 		WPC_Function_Status.Exception_Handing_Flag = FALSE;
 	}
 	else

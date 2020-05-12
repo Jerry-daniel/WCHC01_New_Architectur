@@ -131,7 +131,7 @@ struct WPC_FUNCTION_STATUS_FLAG
 	unsigned int	Exception_Handing_Flag				:1;
 	unsigned int	Hold_Open_FOD_Flag					:1;
 	unsigned int	First_Open_FOD_Flag					:1;
-	unsigned int	Sync_Capture_Open_FOD_Flag			:1;
+	unsigned int	Charge_Load_In_Tx_Flag				:1;
 	unsigned int 	Reserved							:4;
 };
 extern struct WPC_FUNCTION_STATUS_FLAG WPC_Function_Status;
@@ -280,6 +280,7 @@ void I2C_Variable_Init(void);
 void Phone_Placement_Detect(void);
 void OverTemperature_Detect(void);
 void OpenFOD_Alarm_Active_Detect(void);
+void ChargeLoan_In_Tx_Check(void); // 20200511 //
 //-------------------------------------------------------------------------//
 void IDT_P9261_TX_Status_Processer(void);
 void WPC_Processer_Task(void);

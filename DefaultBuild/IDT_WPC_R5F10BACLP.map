@@ -1,4 +1,4 @@
-Renesas Optimizing Linker (W3.02.00 )             08-May-2020 17:36:24
+Renesas Optimizing Linker (W3.02.00 )             11-May-2020 18:03:49
 
 *** Options ***
 
@@ -48,7 +48,7 @@ Renesas Optimizing Linker (W3.02.00 )             08-May-2020 17:36:24
 -Input=DefaultBuild\idt_startup_task.obj
 -Input=DefaultBuild\idt_p9261_tx_status_process.obj
 -SECURITY_ID=00000000000000000000
--DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10BAG.DVF
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10BAC.DVF
 -DEBug
 -NOCOmpress
 -NOOPtimize
@@ -57,9 +57,8 @@ Renesas Optimizing Linker (W3.02.00 )             08-May-2020 17:36:24
 -LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.09.00\lib\malloc_n.lib
 -LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.09.00\lib\rl78em4r.lib
 -OCDBG=84
--DEBUG_MONITOR=1FE00-1FFFF
+-DEBUG_MONITOR=7E00-7FFF
 -USER_OPT_BYTE=F9FFE8
--OCDTR
 -LISt=DefaultBuild\IDT_WPC_R5F10BACLP.map
 -AUTO_SECTION_LAYOUT
 -ROm=.data=.dataR
@@ -80,6 +79,8 @@ SECTION                            START      END         SIZE   ALIGN
                                   00000080  00000080         0   2
 .sdata
                                   00000080  00000080         0   2
+.data
+                                  00000082  000000be        3d   2
 .option_byte
                                   000000c0  000000c3         4   1
 .security_id
@@ -90,20 +91,18 @@ SECTION                            START      END         SIZE   ALIGN
                                   000000c4  000000c4         0   1
 .monitor1
                                   000000ce  000000d7         a   1
-.data
-                                  000000d8  00000116        3f   2
 .text
-                                  00000117  000003a1       28b   1
+                                  000000d8  00000362       28b   1
 .const
                                   00002000  00002000         0   2
 .textf
-                                  00002000  00004ac9      2aca   1
+                                  00002000  00004ac8      2ac9   1
 .monitor2
-                                  0001fe00  0001ffff       200   1
+                                  00007e00  00007fff       200   1
 .bss
-                                  000fe500  000fe56b        6c   2
+                                  000ff700  000ff76b        6c   2
 .dataR
-                                  000fe56c  000fe5aa        3f   2
+                                  000ff76c  000ff7a8        3d   2
 .sbss
                                   000ffe20  000ffe20         0   2
 .sdataR

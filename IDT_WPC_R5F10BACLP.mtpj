@@ -703,13 +703,13 @@
       <DataFormatVersion>1.0</DataFormatVersion>
     </Instance>
     <Instance Guid="48a784ef-5532-4564-a0c1-5cb048b777b1">
-      <DeviceName>R5F10BAG</DeviceName>
+      <DeviceName>R5F10BAC</DeviceName>
       <MemoCount>0</MemoCount>
     </Instance>
   </Class>
   <Class Guid="873c9a58-9bc5-439a-b476-78629a4553ed">
     <Instance Guid="873c9a58-9bc5-439a-b476-78629a4553ed">
-      <ProjectDeviceChangedCounter>3</ProjectDeviceChangedCounter>
+      <ProjectDeviceChangedCounter>2</ProjectDeviceChangedCounter>
       <ProjectInitialDeviceName>R5F10BAC</ProjectInitialDeviceName>
     </Instance>
   </Class>
@@ -814,7 +814,7 @@
       <SourceItemGuid43>b5d0f55a-0655-485f-b68d-8097235f07e7</SourceItemGuid43>
       <SourceItemType43>CSource</SourceItemType43>
       <SourceItemCount>44</SourceItemCount>
-      <LastDeviceChangedCounter>3</LastDeviceChangedCounter>
+      <LastDeviceChangedCounter>2</LastDeviceChangedCounter>
     </Instance>
     <Instance Guid="6bb7060d-7e24-4135-bd9b-7db166417523">
       <AsmOptionI-DefaultValue />
@@ -870,7 +870,7 @@
       <LibOptionLibraryRuntime-DefaultValue>False</LibOptionLibraryRuntime-DefaultValue>
       <LinkOptionLibraryRuntime-DefaultValue>True</LinkOptionLibraryRuntime-DefaultValue>
       <IsLockedByUser>False</IsLockedByUser>
-      <TimeTagModified--0>-8586135432957965865</TimeTagModified--0>
+      <TimeTagModified--0>-8586136469121475528</TimeTagModified--0>
       <BuildMode-0>DefaultBuild</BuildMode-0>
       <Memo-0 />
       <OutputMessageFormat-0>%TargetFiles%</OutputMessageFormat-0>
@@ -1132,7 +1132,7 @@ Buzzer_Task\h
       <LinkOptionVfinfoFileName-DefaultValue>%ProjectName%_vfi.h</LinkOptionVfinfoFileName-DefaultValue>
       <LinkOptionChangeMessageInformation-DefaultValue>None</LinkOptionChangeMessageInformation-DefaultValue>
       <LinkOptionCheck64KOnly-DefaultValue>False</LinkOptionCheck64KOnly-DefaultValue>
-      <LinkOptionDebugMonitor-DefaultValue>1FE00-1FFFF</LinkOptionDebugMonitor-DefaultValue>
+      <LinkOptionDebugMonitor-DefaultValue>7E00-7FFF</LinkOptionDebugMonitor-DefaultValue>
       <LinkOptionLibraryStandard2-DefaultValue>C90</LinkOptionLibraryStandard2-DefaultValue>
       <LinkOptionLogo-DefaultValue>False</LinkOptionLogo-DefaultValue>
       <LinkOptionRom-DefaultValue>.data=.dataR
@@ -1177,7 +1177,7 @@ Buzzer_Task\h
       <LinkOptionShowCFI-DefaultValue>False</LinkOptionShowCFI-DefaultValue>
       <LinkOptionRrmValue-DefaultValue />
       <IsLockedByUser>False</IsLockedByUser>
-      <TimeTagModified--0>-8586135432957995144</TimeTagModified--0>
+      <TimeTagModified--0>-8586136469121504795</TimeTagModified--0>
       <LinkOptionAutoSectionLayout-0>True</LinkOptionAutoSectionLayout-0>
       <LinkOptionCpu-0>False</LinkOptionCpu-0>
       <LinkOptionDebug-0>Debug</LinkOptionDebug-0>
@@ -1218,7 +1218,7 @@ Buzzer_Task\h
       <LinkOptionVfinfoFileName-0>%ProjectName%_vfi.h</LinkOptionVfinfoFileName-0>
       <LinkOptionChangeMessageInformation-0>None</LinkOptionChangeMessageInformation-0>
       <LinkOptionCheck64KOnly-0>False</LinkOptionCheck64KOnly-0>
-      <LinkOptionDebugMonitor-0>1FE00-1FFFF</LinkOptionDebugMonitor-0>
+      <LinkOptionDebugMonitor-0>7E00-7FFF</LinkOptionDebugMonitor-0>
       <LinkOptionLibraryStandard2-0>C90</LinkOptionLibraryStandard2-0>
       <LinkOptionLogo-0>False</LinkOptionLogo-0>
       <LinkOptionRom-0>.data=.dataR
@@ -1409,7 +1409,7 @@ Buzzer_Task\h
       <GeneratorOptionUpdateIO-DefaultValue>None</GeneratorOptionUpdateIO-DefaultValue>
       <GeneratorOtherAdditionalOptions-DefaultValue />
       <GeneratorOptionLastDevice-DefaultValue>DR5F10BAC.DVF, V1.11</GeneratorOptionLastDevice-DefaultValue>
-      <GeneratorOptionCurrentDevice-DefaultValue>DR5F10BAG.DVF, V1.11</GeneratorOptionCurrentDevice-DefaultValue>
+      <GeneratorOptionCurrentDevice-DefaultValue>DR5F10BAC.DVF, V1.11</GeneratorOptionCurrentDevice-DefaultValue>
       <GeneratorOptionOutputBitAccess-DefaultValue>True</GeneratorOptionOutputBitAccess-DefaultValue>
       <GeneratorOptionUitron-DefaultValue>False</GeneratorOptionUitron-DefaultValue>
       <GeneratorOptionOutputMISRAC-DefaultValue>False</GeneratorOptionOutputMISRAC-DefaultValue>
@@ -1419,7 +1419,7 @@ Buzzer_Task\h
       <GeneratorOptionUpdateIO-0>None</GeneratorOptionUpdateIO-0>
       <GeneratorOtherAdditionalOptions-0 />
       <GeneratorOptionLastDevice-0>DR5F10BAC.DVF, V1.11</GeneratorOptionLastDevice-0>
-      <GeneratorOptionCurrentDevice-0>DR5F10BAG.DVF, V1.11</GeneratorOptionCurrentDevice-0>
+      <GeneratorOptionCurrentDevice-0>DR5F10BAC.DVF, V1.11</GeneratorOptionCurrentDevice-0>
       <GeneratorOptionOutputBitAccess-0>True</GeneratorOptionOutputBitAccess-0>
       <GeneratorOptionUitron-0>False</GeneratorOptionUitron-0>
       <GeneratorOptionOutputMISRAC-0>False</GeneratorOptionOutputMISRAC-0>
@@ -2357,8 +2357,8 @@ Buzzer_Task\h
       <DebuggerProperty-HookProperty-HookTransaction-Disconnecting-Length>0</DebuggerProperty-HookProperty-HookTransaction-Disconnecting-Length>
     </Instance>
     <Instance Guid="9feb165e-fbd4-4ce4-90a9-a2dbba0d90e0">
-      <DeviceChangedCounter>3</DeviceChangedCounter>
-      <DeviceName>R5F10BAG</DeviceName>
+      <DeviceChangedCounter>2</DeviceChangedCounter>
+      <DeviceName>R5F10BAC</DeviceName>
       <DebuggerProperty-EssentialProperty-Flash-IdCode-Length>10</DebuggerProperty-EssentialProperty-Flash-IdCode-Length>
       <DebuggerProperty-EssentialProperty-Flash-IdCode-Code0>0</DebuggerProperty-EssentialProperty-Flash-IdCode-Code0>
       <DebuggerProperty-EssentialProperty-Flash-IdCode-Code1>0</DebuggerProperty-EssentialProperty-Flash-IdCode-Code1>
@@ -2378,6 +2378,7 @@ Buzzer_Task\h
       <DebuggerProperty-EssentialProperty-Clock-MonitorClock>System</DebuggerProperty-EssentialProperty-Clock-MonitorClock>
       <DebuggerProperty-EssentialProperty-TargetConnect-TargetSupplyPower>No</DebuggerProperty-EssentialProperty-TargetConnect-TargetSupplyPower>
       <DebuggerProperty-EssentialProperty-TargetConnect-TargetSuppliedVoltage>Use3_3V</DebuggerProperty-EssentialProperty-TargetConnect-TargetSuppliedVoltage>
+      <DebuggerProperty-EssentialProperty-EmulatorConnect-SerialNumber />
       <DebuggerProperty-EssentialProperty-HotPlugin-RetryingInterval>1000</DebuggerProperty-EssentialProperty-HotPlugin-RetryingInterval>
       <DebuggerProperty-EssentialProperty-HotPlugin-NumberOfTimesOfRetrying>3</DebuggerProperty-EssentialProperty-HotPlugin-NumberOfTimesOfRetrying>
       <DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-Length>1</DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-Length>
@@ -2436,7 +2437,6 @@ Buzzer_Task\h
       <DebuggerProperty-HookProperty-HookTransaction-Broke-Length>0</DebuggerProperty-HookProperty-HookTransaction-Broke-Length>
       <DebuggerProperty-HookProperty-HookTransaction-Connected-Length>0</DebuggerProperty-HookProperty-HookTransaction-Connected-Length>
       <DebuggerProperty-HookProperty-HookTransaction-Disconnecting-Length>0</DebuggerProperty-HookProperty-HookTransaction-Disconnecting-Length>
-      <DebuggerProperty-EssentialProperty-EmulatorConnect-SerialNumber />
     </Instance>
   </Class>
   <Class Guid="9f7af90c-526c-4f28-af29-524df208b9e0">
@@ -2464,7 +2464,7 @@ Buzzer_Task\h
     </Instance>
     <Instance Guid="ba6251f6-617d-42ff-9ebd-1dd7a0d34100">
       <KEY_SAVE_CREATED_PROJECT_DATA>True</KEY_SAVE_CREATED_PROJECT_DATA>
-      <KEY_SAVE_DEVICE_CHANGED_COUNTER>3</KEY_SAVE_DEVICE_CHANGED_COUNTER>
+      <KEY_SAVE_DEVICE_CHANGED_COUNTER>2</KEY_SAVE_DEVICE_CHANGED_COUNTER>
       <FormatVersion>1.0</FormatVersion>
       <KeyExtPartsCount>0</KeyExtPartsCount>
       <KeyPinGridLayout>&lt;SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"&gt;
@@ -4072,11 +4072,11 @@ Buzzer_Task\h
       <KeyMacGridData104>Free,-,-,,</KeyMacGridData104>
       <KEY_SAVE_ALLOCATED_FUNCTION>False</KEY_SAVE_ALLOCATED_FUNCTION>
       <KEY_SAVE_DEVICE_PIN_LIST_ZOOM>100</KEY_SAVE_DEVICE_PIN_LIST_ZOOM>
-      <KEY_SAVE_COLUMN_WIDTH_PIN_NUMBER>0:78:78,1:77:77,2:400:400,3:61:61,4:40:40,5:50:50,6:160:160,7:210:210,8:210:210,9:210:210,10:100:100</KEY_SAVE_COLUMN_WIDTH_PIN_NUMBER>
-      <KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>0:98:98,1:157:157,2:42:42,3:44:44,4:121:121,5:120:120,6:85:85</KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>
-      <KEY_SAVE_COLUMN_WIDTH_MACRO_CHILD>0:98:98,1:77:77,2:77:77,3:400:400,4:61:61,5:40:40,6:50:50,7:160:160,8:210:210,9:210:210,10:210:210,11:100:100</KEY_SAVE_COLUMN_WIDTH_MACRO_CHILD>
-      <KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>0:98:98,1:100:100,2:43:43,3:150:150</KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>
-      <KEY_SAVE_COLUMN_WIDTH_EXTERNAL_CHILD>0:98:98,1:78:78,2:77:77,3:400:400,4:61:61,5:40:40,6:50:50,7:160:160,8:210:210,9:210:210,10:210:210</KEY_SAVE_COLUMN_WIDTH_EXTERNAL_CHILD>
+      <KEY_SAVE_COLUMN_WIDTH_PIN_NUMBER>0:78:78,1:77:77,2:400:400,3:61:61,4:40:40,5:50:50,6:160:160,7:210:210,8:198:210,9:210:210,10:100:100</KEY_SAVE_COLUMN_WIDTH_PIN_NUMBER>
+      <KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>0:92:98,1:157:157,2:42:42,3:44:44,4:121:121,5:115:120,6:84:85</KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>
+      <KEY_SAVE_COLUMN_WIDTH_MACRO_CHILD>0:92:98,1:77:77,2:77:77,3:400:400,4:61:61,5:40:40,6:50:50,7:160:160,8:210:210,9:198:210,10:210:210,11:100:100</KEY_SAVE_COLUMN_WIDTH_MACRO_CHILD>
+      <KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>0:92:98,1:100:100,2:43:43,3:144:150</KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>
+      <KEY_SAVE_COLUMN_WIDTH_EXTERNAL_CHILD>0:92:98,1:78:78,2:77:77,3:400:400,4:61:61,5:40:40,6:50:50,7:160:160,8:210:210,9:198:210,10:210:210</KEY_SAVE_COLUMN_WIDTH_EXTERNAL_CHILD>
     </Instance>
     <Instance Guid="aacae7da-f24b-4709-81fa-541016e73641">
       <KeyTopViewZoom>1</KeyTopViewZoom>
@@ -4444,12 +4444,12 @@ Buzzer_Task\h
     &lt;/RTC1HZ&gt;
     &lt;RXD0 Name="RXD0" Text="disable" /&gt;
     &lt;ProjectName Name="PrjName" Text="IDT_WPC_R5F10BACLP" /&gt;
-    &lt;ProjectPath Name="PrjPath" Text="D:\Renesas_Code\Wireless_Charging\IDT_Ver\IDT_WPC_R5F10BAGLP_2020427_New_Architectur" /&gt;
+    &lt;ProjectPath Name="PrjPath" Text="D:\Renesas_Code\Wireless_Charging\IDT_Ver\IDT_WPC_R5F10BACLP_2020427_New_Architectur" /&gt;
     &lt;ProjectKind Name="PrjKind" Text="Project78K0R" /&gt;
     &lt;DeviceName Name="DeviceName" Fixed="" Text="RL78F13" /&gt;
     &lt;MCUName Name="MCUName" Text="RL78F13_30pin" /&gt;
-    &lt;ChipName Name="ChipName" Text="R5F10BAG" /&gt;
-    &lt;ChipID Name="ChipID" Text="R5F10BAG" /&gt;
+    &lt;ChipName Name="ChipName" Text="R5F10BAC" /&gt;
+    &lt;ChipID Name="ChipID" Text="R5F10BAC" /&gt;
     &lt;CPUCoreType Name="CPUCoreType" Fixed="" Text="1" /&gt;
     &lt;MCUType Name="MCUType" Fixed="" Text="RL78" /&gt;
     &lt;Compiler Name="Compiler" Text="CCRL" /&gt;
@@ -4458,14 +4458,14 @@ Buzzer_Task\h
     &lt;LinkDirectiveFile Name="D0" Text="lk.dr" /&gt;
     &lt;OnChipDebugOptionBytes Name="GO" Text="1" /&gt;
     &lt;OnChipDebugOptionBytesValue Name="GOValue" Text="84" /&gt;
-    &lt;StartAddressOfOnChipDebugOptionBytes Name="GOStart" Text="1FE00" /&gt;
+    &lt;StartAddressOfOnChipDebugOptionBytes Name="GOStart" Text="7E00" /&gt;
     &lt;SizeOfOnChipDebugOptionBytesArea Name="GOSizeValue" Text="512" /&gt;
     &lt;UserOptionBytes Name="GB" Text="1" /&gt;
     &lt;UserOptionBytesValue Name="GBValue" Text="F9FFE8" /&gt;
-    &lt;RAMStartAddress Chip="R5F10AGG,R5F10ALG,R5F10AMG,R5F10BAG,R5F10BBG,R5F10BGG,R5F10BLG,R5F10BMG" Name="RAMStartAddress" Fixed="" Text="000FDF00" /&gt;
+    &lt;RAMStartAddress Chip="R5F10A6C,R5F10AAC,R5F10ABC,R5F10AGC,R5F10ALC,R5F10BAC,R5F10BBC,R5F10BGC,R5F10BLC" Name="RAMStartAddress" Fixed="" Text="000FF700" /&gt;
     &lt;RAMEndAddress Name="RAMEndAddress" Fixed="" Text="000FFEFF" /&gt;
-    &lt;ROMEndAddress Chip="R5F10AGG,R5F10ALG,R5F10AMG,R5F10BAG,R5F10BBG,R5F10BGG,R5F10BLG,R5F10BMG" Name="ROMEndAddress" Fixed="" Text="0001FFFF" /&gt;
-    &lt;MirrorROM Chip="R5F10AGG,R5F10ALG,R5F10AMG,R5F10BAG,R5F10BBG,R5F10BGG,R5F10BLG,R5F10BMG" Name="MirrorROM" Fixed="" Text="47.75" /&gt;
+    &lt;ROMEndAddress Chip="R5F10A6C,R5F10AAC,R5F10ABC,R5F10AGC,R5F10ALC,R5F10BAC,R5F10BBC,R5F10BGC,R5F10BLC" Name="ROMEndAddress" Fixed="" Text="00007FFF" /&gt;
+    &lt;MirrorROM Chip="R5F10A6C,R5F10AAC,R5F10ABC,R5F10AGC,R5F10ALC,R5F10BAC,R5F10BBC,R5F10BGC,R5F10BLC" Name="MirrorROM" Fixed="" Text="24" /&gt;
     &lt;TAUUsedRTC1Hz Name="TAUUsedRTC1Hz" Text="false" Comment="unused" Trigger="RTC1HZ"&gt;
       &lt;Effect&gt;
         &lt;RTC /&gt;
@@ -4497,7 +4497,7 @@ Buzzer_Task\h
     &lt;UseFDL Name="UseFDL" Text="no" /&gt;
     &lt;DataFlash Name="DataFlash" Text="0" /&gt;
     &lt;OCDROM Name="OCDROM" Text="Used" /&gt;
-    &lt;OCDROM_Address Name="OCDROM_Address" Text="0001FE00" /&gt;
+    &lt;OCDROM_Address Name="OCDROM_Address" Text="00007E00" /&gt;
     &lt;OCDROM_Length Name="OCDROM_Length" Text="512" /&gt;
     &lt;PrjVersion Name="PrjVersion" Text="1.2.0.1" /&gt;
     &lt;LinkFileName Name="LinkFileName" Text="" /&gt;
@@ -4782,6 +4782,8 @@ Buzzer_Task\h
       &lt;LIN&gt;
       &lt;/LIN&gt;
       &lt;CAN&gt;
+        &lt;CTxD0 Chip="R5F10BME,R5F10BMF,R5F10BMG,R5F10BLC,R5F10BLD,R5F10BLE,R5F10BLF,R5F10BLG,R5F10BGC,R5F10BGD,R5F10BGE,R5F10BGF,R5F10BGG,R5F10BBC,R5F10BBD,R5F10BBE,R5F10BBF,R5F10BBG,R5F10BAC" PIOR46="0" Port="P10" Point="O" /&gt;
+        &lt;CRxD0 Chip="R5F10BME,R5F10BMF,R5F10BMG,R5F10BLC,R5F10BLD,R5F10BLE,R5F10BLF,R5F10BLG,R5F10BGC,R5F10BGD,R5F10BGE,R5F10BGF,R5F10BGG,R5F10BBC,R5F10BBD,R5F10BBE,R5F10BBF,R5F10BBG,R5F10BAC" PIOR46="0" Port="P11" Point="I" /&gt;
       &lt;/CAN&gt;
       &lt;Others&gt;
         &lt;VDD AltFunc="VDD" Point="-" /&gt;
@@ -5561,7 +5563,6 @@ Buzzer_Task\h
         &lt;cg_ocd_trace Name="cg_ocd_trace" Value="FE300" /&gt;
         &lt;cg_security9 Name="cg_security9" Value="00" /&gt;
         &lt;cg_security7 Name="cg_security7" Value="00" /&gt;
-        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
         &lt;cg_security5 Name="cg_security5" Value="00" /&gt;
         &lt;cg_crc_area Name="cg_crc_area" Value="00" /&gt;
         &lt;cg_security3 Name="cg_security3" Value="00" /&gt;
@@ -5572,12 +5573,13 @@ Buzzer_Task\h
         &lt;cg_ocd_trace_size Name="cg_ocd_trace_size" Value="512" /&gt;
         &lt;clock_option Name="clock_option" Value="E8" /&gt;
         &lt;lvi_option Name="lvi_option" Value="FF" /&gt;
+        &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
         &lt;cg_option Name="cg_option" Value="84" /&gt;
         &lt;cg_security8 Name="cg_security8" Value="00" /&gt;
         &lt;cg_security6 Name="cg_security6" Value="00" /&gt;
-        &lt;ocdstart Name="ocdstart" Value="1FE00" /&gt;
+        &lt;ocdstart Name="ocdstart" Value="07E00" /&gt;
         &lt;cg_onchip Name="cg_onchip" Value="" /&gt;
-        &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
+        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
         &lt;cg_iawctl_value Name="cg_iawctl_value" Value="00" /&gt;
         &lt;cg_ocd_ram_size Name="cg_ocd_ram_size" Value="512" /&gt;
         &lt;pior_value7 Name="pior_value7" Value="00" /&gt;

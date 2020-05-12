@@ -42,8 +42,8 @@ P9261_COMBINED_STATUS_VALUE P9261_COMBINED_MSG;
 
 unsigned char 	COIL_DETECT = RESET_COIL;
 unsigned char 	LAST_COIL = RESET_COIL;
-unsigned char	Last_P9261_Tx_State_Code = 0xFF;
-unsigned char 	Last_P9261_Tx_Status_Code = 0xFF;
+//unsigned char	Last_P9261_Tx_State_Code = 0xFF;
+//unsigned char 	Last_P9261_Tx_Status_Code = 0xFF;
 unsigned int	P9261_NTC_ADC_OUT = 0x0FFF;
 unsigned int 	COIL_1_Q_Message = 0xFFFF;
 unsigned int 	COIL_2_Q_Message = 0xFFFF;
@@ -666,7 +666,7 @@ void Read_P9261_Register_Message(void)
 					//----------------------------------------------------------------------------//
 					if(P9261_IIC_State.read_reg_start_flag==FALSE)
 					{
-						P9261_Read_Cmd_Start();
+						I2C_Commumication_Start();//P9261_Read_Cmd_Start();
 					}
 					else
 					{
