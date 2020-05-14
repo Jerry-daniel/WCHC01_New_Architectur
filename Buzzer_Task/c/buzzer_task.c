@@ -189,7 +189,7 @@ void Error_Alarm_Buzzer_Task(void)
 {
 	if(Buzzer_State.Alarm_En_Flag==TRUE)
 	{	
-		TEST_TP5 = 1;
+		//TEST_TP6 = 1;
 		Buzzer_State.PWM_Go_Flag = TRUE;
 		Buzzer_On_Time--;
 		if(Buzzer_On_Time==CLEAR)
@@ -199,7 +199,7 @@ void Error_Alarm_Buzzer_Task(void)
 	}
 	else
 	{
-		TEST_TP5 = 0;
+		//TEST_TP6 = 0;
 		Buzzer_State.PWM_Go_Flag = FALSE;
 		BUZZER = OFF;
 		Buzzer_Off_Time--;
@@ -215,6 +215,7 @@ void Error_Alarm_Buzzer_Task(void)
 				//Buzzer_State.Active_End_Flag = TRUE;
 				Buzzer_State.Cycle_Delay_Start_Flag = TRUE;
 				Buzzer_State.Cycle_Delay_End_Flag = FALSE;
+				//TEST_TP4 = 0;
 			}
 		}
 		

@@ -63,7 +63,7 @@ volatile unsigned long *p9261_tx_status_flag_address;
 //unsigned char 	delay_count; // for test //
 //unsigned char over_temp_1;
 //unsigned char over_temp_2;
-
+unsigned char charge_complete_cnt = 0;
 /***********************************************************************************************************************
 * Function Name: Clear_P9261_IIC_State_Flag
 * Description  : This function is Clear_P9261_IIC_State_Flag function. 
@@ -325,6 +325,7 @@ void Receive_P9261_Tx_Status_Task(unsigned char P9261_TX_STATUS)
 		case	STATUS_power_loss_fod_alarm:					//= 0x18
 		//-------------------------------------------------------------------------------------------------------------//
 				P9261_TxStatus_Message.Power_Loss_Fod_Alarm_Status = TRUE;
+				//TEST_TP3 = 1;
 		break;
 		//-------------------------------------------------------------------------------------------------------------//
 		case	STATUS_open_fod_alarm:							//= 0x19
@@ -332,7 +333,7 @@ void Receive_P9261_Tx_Status_Task(unsigned char P9261_TX_STATUS)
 				//if((Buzzer_State.Buzzer_Working_End_Flag==TRUE)&&(LED_Status.LED_Working_End_Flag==TRUE))
 				//{
 					P9261_TxStatus_Message.Open_FOD_Alarm_Status = TRUE;
-					TEST_TP2 = 1;
+					//TEST_TP2 = 1;
 				//}
 				/*else
 				{
@@ -690,11 +691,8 @@ void Read_P9261_Register_Message(void)
 ***********************************************************************************************************************/
 void P9261_Data_Update(void)
 {
-	//TEST_TP2 = 0;
 	P9261_IIC_State.iic_receiver_end_flag = FALSE;
-	
 	P9261_IIC_State.read_reg_start_flag = FALSE;// 20200508 MODIFY //
-	
 	Clear_P9261_Tx_State_Flag(&P9261_TxState_Message);
 	Clear_P9261_Tx_Status_Flag(&P9261_TxStatus_Message);
 	Clear_P9261_Combined_State_Flag(&P9261_CombinedMessage);
@@ -704,9 +702,12 @@ void P9261_Data_Update(void)
 	if(WPC_Function_Status.P9261_ReStart_End_Flag==TRUE)
 	{
 		WPC_Function_Status.P9261_State_Update_End_Flag = FALSE;
-	}			
+	}		
+	else
+	{
+		P9261_Restart_Init();	
+	}
 	Read_I2C_Data_Duty_Time = I2C_DUTY_TIME;
-	//TEST_TP3 = 1;
 }
 /***********************************************************************************************************************
 * Function Name: P9261_Read_Cmd_Start

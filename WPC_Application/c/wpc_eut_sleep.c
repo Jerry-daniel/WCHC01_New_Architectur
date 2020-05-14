@@ -51,6 +51,7 @@ void WPC_EUT_Sleep_Task(void)
 	if(WPC_System.EUT_Sleep_Mode==TRUE)
 	{
 		WPC_System.EUT_Sleep_Mode = FALSE;
+		Last_Charge_Load_On_Tx = WPC_Function_Status.Charge_Load_In_Tx_Flag;
 		CHARGE_DISABLE;
 		WPC_Sleep_Reset();
 		CHARGE_STATE_LED_OFF;

@@ -56,11 +56,12 @@ unsigned int Read_I2C_Data_Duty_Time = CLEAR;
 unsigned char Read_Next_Register_Delay_Time = CLEAR;
 
 unsigned char FOD_Alarm_Count = CLEAR;
+unsigned char PLOSS_FOD_Alarm_Count = CLEAR;
 
 //unsigned char p9261_led_state = CLEAR;
 //unsigned int caculator_time = CLEAR;
 unsigned int UVOL_Wait_Time = CLEAR;
-
+unsigned char Last_Charge_Load_On_Tx;
 //unsigned char Coil_Current_Count = CLEAR;
 unsigned int Temperature_Value = RESET_TEMPERATURE_VALUE;
 //unsigned int Door_Close_Waitting_Time;
@@ -76,7 +77,7 @@ volatile unsigned int *idt_wpc_state_flag_address;
 
 
 unsigned char function_test_flag;
-
+unsigned char Standby_Count = CLEAR;
 //unsigned long p9261_message_case = 0x00000000;
 //unsigned char read_p9261_message(unsigned long const *address);
 //=====================================================================//
@@ -146,7 +147,7 @@ void WPC_Sleep_Reset(void)
 void IO_Interface_Init(void)
 {
 	//CAN0_STB = LEVEL_HIGH;
-	ACC_ON_RL78 = LEVEL_HIGH;
+	ACC_ON_RL78 = LEVEL_HIGH;	// Control Q33 shuts down : power on //
 	CHARGE_DISABLE;
 	BUZZER = OFF;				// Buzzer Disable //
 	KEYBOARD_PWR_SW_LED_OFF;	// Keyboard pwr_sw led //
@@ -252,6 +253,7 @@ void WPC_System_Initial(void)
 	WPC_NEXT_MODE_CASE = WPC_MODE_CASE;
 	IDT_WPC_TASK = IDT_WPC_STARTUP_TASK;
 	WPC_Function_Status.Forget_Remove_End_Flag = TRUE;
+	WPC_Function_Status.Ploss_Remove_End_Flag = TRUE;
 	WPC_Function_Status.P9261_State_Update_End_Flag = TRUE;
 }
 /***********************************************************************************************************************
@@ -262,7 +264,7 @@ void WPC_System_Initial(void)
 ***********************************************************************************************************************/
 void Phone_Placement_Detect(void)
 {
-	if(WPC_Function_Status.Charge_Load_In_Tx_Flag==TRUE)
+	if((WPC_Function_Status.Charge_Load_In_Tx_Flag==TRUE)||(Last_Charge_Load_On_Tx==TRUE))
 	{
 		Buzzer_State.Forget_Buzzer_Tigger_Flag = TRUE;
 	}
@@ -599,10 +601,18 @@ void OverTemperature_Detect(void)
 ***********************************************************************************************************************/
 void P9261_Restart_Init(void)
 {
-	if(((COIL_1_Q_Message>CLEAR)&&(COIL_1_Q_Message<1000))||((COIL_2_Q_Message>CLEAR)&&(COIL_2_Q_Message<1000))||((COIL_3_Q_Message>CLEAR)&&(COIL_3_Q_Message<1000)))
+	if(P9261_COMBINED_MSG==0x09)	{Standby_Count++;}
+	else							{Standby_Count = CLEAR;}
+	
+	if(Standby_Count==2)
 	{
+		Standby_Count = CLEAR;
 		WPC_Function_Status.P9261_ReStart_End_Flag = TRUE;
 	}
+	/*if(((COIL_1_Q_Message>CLEAR)&&(COIL_1_Q_Message<1000))||((COIL_2_Q_Message>CLEAR)&&(COIL_2_Q_Message<1000))||((COIL_3_Q_Message>CLEAR)&&(COIL_3_Q_Message<1000)))
+	{
+		WPC_Function_Status.P9261_ReStart_End_Flag = TRUE;
+	}*/
 }
 /***********************************************************************************************************************
 * Function Name: OpenFOD_Alarm_Active_Detect

@@ -283,6 +283,7 @@ void P9261_Register_Reading(void);
 void I2C_Commumication_Start(void);
 void OpenFOD_Alarm_Algorithm(void);
 void OpenFOD_Detect_Restart(void);
+
 unsigned char Clear_P9261_IIC_State_Flag(unsigned long const *address);
 unsigned char Clear_P9261_Combined_State_Flag(unsigned long const *address);
 unsigned char Clear_P9261_Tx_State_Flag(unsigned long const *address);

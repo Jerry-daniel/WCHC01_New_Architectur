@@ -77,12 +77,15 @@ unsigned char WPC_Normal_Process(void)
 			{
 				if(WPC_Function_Status.P9261_ReStart_End_Flag==TRUE)
 				{
+					//TEST_TP4 = 1;
 					IDT_WPC_Processer_Task();	// IDT P9261 power charge processer //
 				}
 				WPC_NEXT_MODE_CASE = WPC_NORMAL_MODE;
 			}
 			else
 			{
+				//TEST_TP3 = 0;
+				//TEST_TP4 = 0;
 				//*WPC_System_Address = EUT_SLEEP_MODE;		
 				WPC_System.Shutdown_Mode = FALSE;
 				WPC_System.Normal_Mode = FALSE;
@@ -93,6 +96,8 @@ unsigned char WPC_Normal_Process(void)
 		}
 		else
 		{
+			//TEST_TP3 = 0;
+			//TEST_TP4 = 0;
 			//*WPC_System_Address = SLEEP_MODE;
 			WPC_System.Shutdown_Mode = FALSE;
 			WPC_System.Normal_Mode = FALSE;
@@ -103,6 +108,8 @@ unsigned char WPC_Normal_Process(void)
 	}
 	else
 	{
+		//TEST_TP3 = 0;
+		//TEST_TP4 = 0;
 		//*WPC_System_Address = SHUTDOWN_MODE;
 		WPC_System.Shutdown_Mode = TRUE;
 		WPC_System.Normal_Mode = FALSE;

@@ -37,11 +37,15 @@ variables define
 #else
 	#define FOD_COUNT			6//3
 #endif
+
+#define PLOSS_FOD_COUNT			6
 /***********************************************************************************************************************
 Locate variables and functions
 ***********************************************************************************************************************/
 void OpenFOD_Alarm_Processer(void);
+void PlossFOD_Alarm_Processer(void);
 void Tx_Extern_OverTemperature_Alarm_Processer(void);
+unsigned char PlossFOD_Count = CLEAR;
 /***********************************************************************************************************************
 * Function Name: IDT_P9261_TX_Status_Processer
 * Description  : This function is IDT_P9261_TX_Status_Processer function.
@@ -174,21 +178,23 @@ void IDT_P9261_TX_Status_Processer(void)
 		else if(P9261_TxStatus_Message.Power_Loss_Fod_Alarm_Status == TRUE)
 		{
 			P9261_TxStatus_Message.Power_Loss_Fod_Alarm_Status = FALSE;
-			Abnormal_Event.P9261_Error_Alarm_Flag = TRUE;
+			WPC_Function_Status.Ploss_Remove_End_Flag = FALSE;
+			//WPC_Function_Status.First_Ploss_FOD_Flag = TRUE;
+			PlossFOD_Alarm_Processer();
+			/*PlossFOD_Count++;
+			if(PlossFOD_Count>=4)
+			{
+				PlossFOD_Count = CLEAR;
+				Abnormal_Event.P9261_Error_Alarm_Flag = TRUE;
+				TEST_TP4 = 1;
+			}*/
 		}
 		else if(P9261_TxStatus_Message.Open_FOD_Alarm_Status == TRUE)
 		{
 			P9261_TxStatus_Message.Open_FOD_Alarm_Status = FALSE;
 			WPC_Function_Status.Forget_Remove_End_Flag = FALSE;
-			
-			WPC_Function_Status.First_Open_FOD_Flag = TRUE;
-			TEST_TP3 = 1;
-			
-			TEST_TP2 = 0;
-			//if(WPC_Function_Status.Hold_Open_FOD_Flag==FALSE)
-			//{
-				OpenFOD_Alarm_Processer();
-			//}		
+			//WPC_Function_Status.First_Open_FOD_Flag = TRUE;
+			OpenFOD_Alarm_Processer();	
 		}
 		else if(P9261_TxStatus_Message.Tx_OverCurrent_Alarm_Status == TRUE)
 		{
@@ -207,18 +213,10 @@ void IDT_P9261_TX_Status_Processer(void)
 		Clear_Abnormal_Event_Flag(&Abnormal_Event);	
 		//Last_P9261_Tx_Status_Code = P9261_Reg_State.TX_STATUS_MESSAGE;
 		
-		if(WPC_Function_Status.First_Open_FOD_Flag==TRUE)
+		/*if(WPC_Function_Status.First_Open_FOD_Flag==TRUE)
 		{
-			WPC_Function_Status.First_Open_FOD_Flag = FALSE;	
-			
-			/*if(FOD_Alarm_Count>=FOD_COUNT)
-			{
-				WPC_Function_Status.Hold_Open_FOD_Flag = TRUE;	
-			}
-			OpenFOD_Detect_Restart();
-			*/
-			TEST_TP3 = 0;
-		}
+			WPC_Function_Status.First_Open_FOD_Flag = FALSE;
+		}*/
 		
 	}
 	if(WPC_Function_Status.Over_Temperature_Alarm_Status == TRUE)
@@ -233,6 +231,23 @@ void IDT_P9261_TX_Status_Processer(void)
 * Arguments    : None
 * Return Value : None
 ***********************************************************************************************************************/
+void PlossFOD_Alarm_Processer(void)
+{
+	PLOSS_FOD_Alarm_Count++;
+	if(PLOSS_FOD_Alarm_Count>=PLOSS_FOD_COUNT)
+	{
+		WPC_Function_Status.Hold_Ploss_FOD_Flag = TRUE;
+		PLOSS_FOD_Alarm_Count = CLEAR;
+		//TEST_TP3 = 0;
+	}
+}
+
+/***********************************************************************************************************************
+* Function Name: OpenFOD_Alarm_Processer
+* Description  : This function is OpenFOD_Alarm_Processer function.
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
 void OpenFOD_Alarm_Processer(void)
 {
 	if(WPC_Function_Status.OpenFOD_Detect_Time_Flag==FALSE)
@@ -240,24 +255,16 @@ void OpenFOD_Alarm_Processer(void)
 		WPC_Function_Status.OpenFOD_Detect_Time_Flag = TRUE;
 		OpenFOD_Alarm_Algorithm();	
 		FOD_Alarm_Count++;
-		I2C_DATA_CYCLE_COUNT = CLEAR;
+		//I2C_DATA_CYCLE_COUNT = CLEAR;
 	}
 	else
 	{
-		//OpenFOD_Alarm_Algorithm();
-		//if(I2C_DATA_CYCLE_COUNT<CNT_X_0_5T)
-		//{
-			OpenFOD_Alarm_Algorithm();
-			if(FOD_Alarm_Count>=FOD_COUNT)
-			{
-				WPC_Function_Status.Hold_Open_FOD_Flag = TRUE;	
-				OpenFOD_Detect_Restart();
-			}
-		//}
-		/*else
+		OpenFOD_Alarm_Algorithm();
+		if(FOD_Alarm_Count>=FOD_COUNT)
 		{
+			WPC_Function_Status.Hold_Open_FOD_Flag = TRUE;	
 			OpenFOD_Detect_Restart();
-		}*/
+		}
 	}
 }
 /***********************************************************************************************************************

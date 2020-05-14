@@ -167,7 +167,7 @@ void Error_LED_Flash_Task(void)
 	{
 		if(LED_Status.Alarm_LED_En_Flag==TRUE)
 		{
-			TEST_TP6 = 1;
+			//TEST_TP6 = 1;
 			ERROR_LED_ON;
 			LED_On_Time--;
 			if(LED_On_Time==CLEAR)
@@ -177,7 +177,7 @@ void Error_LED_Flash_Task(void)
 		}
 		else
 		{
-			TEST_TP6 = 0;
+			//TEST_TP6 = 0;
 			ERROR_LED_OFF;
 			LED_Off_Time--;
 			if(LED_Off_Time==CLEAR)

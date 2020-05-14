@@ -11,7 +11,7 @@
 #define _WPC_APPLICATION_H
 //===============================================================================//
 //#define _MCU_VDD_3V3_
-#define _P9261_PROGRAMMING_MODE_
+//#define _P9261_PROGRAMMING_MODE_
 //#define _WPC_PCBA_VER_1_2_
 //#define _OPENFOD_LONG_TIME_
 //#define _USED_P9261_INTERNAL_TEMPERATURE_STATUS_
@@ -128,11 +128,14 @@ struct WPC_FUNCTION_STATUS_FLAG
 	unsigned int 	Over_Temperature_Alarm_Status		:1;
 	unsigned int	P9261_State_Update_End_Flag			:1;
 	unsigned int 	Forget_Remove_End_Flag				:1;
+	unsigned int	Ploss_Remove_End_Flag				:1; // 20200514 //
 	unsigned int	Exception_Handing_Flag				:1;
 	unsigned int	Hold_Open_FOD_Flag					:1;
-	unsigned int	First_Open_FOD_Flag					:1;
+	unsigned int	Hold_Ploss_FOD_Flag					:1; // 20200514 //
+	//unsigned int	First_Open_FOD_Flag					:1;
+	//unsigned int	First_Ploss_FOD_Flag				:1;	// 20200514 //
 	unsigned int	Charge_Load_In_Tx_Flag				:1;
-	unsigned int 	Reserved							:4;
+	unsigned int 	Reserved							:3;
 };
 extern struct WPC_FUNCTION_STATUS_FLAG WPC_Function_Status;
 
@@ -210,11 +213,14 @@ Global variables
 ***********************************************************************************************************************/
 //extern unsigned char p9261_led_state;
 //extern unsigned int caculator_time;
+extern unsigned char Last_Charge_Load_On_Tx;
 extern unsigned int	UVOL_Wait_Time;
 //extern unsigned int	MCU_Initial_Dly_Time;
 //extern unsigned char Coil_Current_Count;
 //extern unsigned int Door_Close_Waitting_Time;
 extern unsigned char FOD_Alarm_Count;
+extern unsigned char PLOSS_FOD_Alarm_Count;
+
 extern unsigned int Read_I2C_Data_Duty_Time;
 extern unsigned int I2C_DATA_CYCLE_COUNT;
 

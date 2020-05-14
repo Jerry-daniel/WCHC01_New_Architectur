@@ -470,7 +470,7 @@
     &lt;/RTC1HZ&gt;
     &lt;RXD0 Name="RXD0" Text="disable" /&gt;
     &lt;ProjectName Name="PrjName" Text="IDT_WPC_R5F10BACLP" /&gt;
-    &lt;ProjectPath Name="PrjPath" Text="D:\Renesas_Code\Wireless_Charging\IDT_Ver\IDT_WPC_R5F10BACLP_2020427_New_Architectur" /&gt;
+    &lt;ProjectPath Name="PrjPath" Text="D:\Renesas_Code\Wireless_Charging\IDT_Ver\IDT_WPC_R5F10BACLP_2020514_New_Architectur" /&gt;
     &lt;ProjectKind Name="PrjKind" Text="Project78K0R" /&gt;
     &lt;DeviceName Name="DeviceName" Fixed="" Text="RL78F13" /&gt;
     &lt;MCUName Name="MCUName" Text="RL78F13_30pin" /&gt;

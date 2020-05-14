@@ -37,6 +37,7 @@ Global variables and functions
 ***********************************************************************************************************************/
 struct WPC_ABNORMAL_ALARM_STATUS_FLAG Abnormal_Event;
 void Forget_Remove_Check(void);
+void Ploss_Remove_Check(void);
 void Error_Alarm_Out_Processer(void);
 void WPC_OverTemperature_Alarm_Out_Processer(void);
 void Rx_OverTemperature_Alarm_Out_Processer(void);
@@ -95,6 +96,39 @@ void Abnormal_Alarm_Output_Event(void)
 	}
 }
 /***********************************************************************************************************************
+* Function Name: Ploss_Remove_Check
+* Description  : This function is Forget_Remove_Check function.
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+void Ploss_Remove_Check(void)
+{
+	if(WPC_Function_Status.Ploss_Remove_End_Flag==FALSE)
+	{
+		if(P9261_CombinedMessage.In_Ploss_FOD==FALSE)
+		{
+			Buzzer_Disable();
+			Alarm_LED_Disable();
+			PLOSS_FOD_Alarm_Count = CLEAR;
+			WPC_Function_Status.Hold_Ploss_FOD_Flag = FALSE;
+			WPC_Function_Status.Ploss_Remove_End_Flag = TRUE;
+		}
+		else
+		{
+			if(WPC_Function_Status.Hold_Ploss_FOD_Flag==TRUE)
+			{
+				Abnormal_Event.P9261_Error_Alarm_Flag = TRUE;
+			}
+			else
+			{
+				Buzzer_Disable();
+				Alarm_LED_Disable();
+				Abnormal_Event.P9261_Error_Alarm_Flag = FALSE;
+			}
+		}
+	}
+}
+/***********************************************************************************************************************
 * Function Name: Forget_Remove_Check
 * Description  : This function is Forget_Remove_Check function.
 * Arguments    : None
@@ -116,16 +150,9 @@ void Forget_Remove_Check(void)
 		{
 			if(WPC_Function_Status.Hold_Open_FOD_Flag==TRUE)
 			{
-				//WPC_Function_Status.Hold_Open_FOD_Flag = FALSE;
-				//if(WPC_Function_Status.Sync_Capture_Open_FOD_Flag==TRUE)
-				//{
-					/////Abnormal_Event.P9261_Error_Alarm_Flag = TRUE;
-					/////TEST_TP4 = 1;
-				//}
 				if((COIL_1_Q_Message<120)||(COIL_2_Q_Message<120)||(COIL_3_Q_Message<120))
 				{
 					Abnormal_Event.P9261_Error_Alarm_Flag = TRUE;
-					TEST_TP4 = 1;
 				}
 				else
 				{
@@ -169,6 +196,7 @@ void WPC_Abnormal_Alarm_Task(void)
 		Rx_OverTemperature_Alarm_Out_Processer();
 	}
 	Forget_Remove_Check();
+	Ploss_Remove_Check();
 }
 /***********************************************************************************************************************
 * Function Name: Error_Alarm_Out_Processer
@@ -181,7 +209,7 @@ void Error_Alarm_Out_Processer(void)
 	//Abnormal_Event.P9261_Error_Alarm_Flag = FALSE;
 	if((Buzzer_State.Buzzer_Working_End_Flag==TRUE)&&(LED_Status.LED_Working_End_Flag==TRUE))
 	{
-		TEST_TP4 = 0;
+		//TEST_TP4 = 0;
 		Abnormal_Event.P9261_Error_Alarm_Flag = FALSE;
 		CHARGE_STATE_LED_OFF;
 		LED_Status.Error_LED_Trigger_Flag = TRUE;

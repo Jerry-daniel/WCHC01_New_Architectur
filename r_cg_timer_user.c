@@ -94,13 +94,13 @@ static void __near r_tau0_channel1_interrupt(void)
     /* Start user code. Do not edit comment generated here */
 	if(WPC_Function_Status.IDT_Program_Debug_Mode_Flag==FALSE)
 	{
-		if(Power_Sw.Active_Flag==TRUE)
+		/*if(Power_Sw.Active_Flag==TRUE)
 		{
 			if(WPC_Function_Status.P9261_ReStart_End_Flag==FALSE)
 			{
 				P9261_Restart_Init();
 			}
-		}
+		}*/
 		//if(UVOL_Wait_Time!=CLEAR)							{UVOL_Wait_Time--;}
 		//if(WPC_Function_Status.EUT_Wait_Time_Flag==TRUE)	{if(EUT_Waitting_Time!=CLEAR){EUT_Waitting_Time--;}}
 		if(WPC_Function_Status.ACC_Off_Dly3_5T_Flag==TRUE)	{if(ACC_Off_Reset_Time!=CLEAR){ACC_Off_Reset_Time--;}}

@@ -184,7 +184,7 @@ static void r_iic00_callback_master_receiveend(void)
 	}
 	else if(P9261_IIC_FLOW==0xD2)
 	{
-		P9261_Reg_State.COMBINED_MESSAGE = (P9261_Message&0x0A);
+		P9261_Reg_State.COMBINED_MESSAGE = (P9261_Message&0x0F);
 		P9261_COMBINED_MSG = P9261_Reg_State.COMBINED_MESSAGE;
 		P9261_Address[0] = 0x06;
 		P9261_Address[1] = 0xAF;
