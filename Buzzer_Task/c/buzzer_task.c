@@ -189,7 +189,7 @@ void Error_Alarm_Buzzer_Task(void)
 {
 	if(Buzzer_State.Alarm_En_Flag==TRUE)
 	{	
-		//TEST_TP6 = 1;
+		TEST_TP3 = 1;
 		Buzzer_State.PWM_Go_Flag = TRUE;
 		Buzzer_On_Time--;
 		if(Buzzer_On_Time==CLEAR)
@@ -199,7 +199,7 @@ void Error_Alarm_Buzzer_Task(void)
 	}
 	else
 	{
-		//TEST_TP6 = 0;
+		TEST_TP3 = 0;
 		Buzzer_State.PWM_Go_Flag = FALSE;
 		BUZZER = OFF;
 		Buzzer_Off_Time--;

@@ -32,13 +32,8 @@ Includes
 /***********************************************************************************************************************
 variables define
 ***********************************************************************************************************************/
-#ifdef _OPENFOD_LONG_TIME_
-	#define FOD_COUNT			3//5
-#else
-	#define FOD_COUNT			6//3
-#endif
-
-#define PLOSS_FOD_COUNT			6
+#define FOD_COUNT			3
+#define PLOSS_FOD_COUNT		6
 /***********************************************************************************************************************
 Locate variables and functions
 ***********************************************************************************************************************/
@@ -194,6 +189,7 @@ void IDT_P9261_TX_Status_Processer(void)
 			P9261_TxStatus_Message.Open_FOD_Alarm_Status = FALSE;
 			WPC_Function_Status.Forget_Remove_End_Flag = FALSE;
 			//WPC_Function_Status.First_Open_FOD_Flag = TRUE;
+			TEST_TP2 = 0;
 			OpenFOD_Alarm_Processer();	
 		}
 		else if(P9261_TxStatus_Message.Tx_OverCurrent_Alarm_Status == TRUE)
@@ -236,6 +232,7 @@ void PlossFOD_Alarm_Processer(void)
 	PLOSS_FOD_Alarm_Count++;
 	if(PLOSS_FOD_Alarm_Count>=PLOSS_FOD_COUNT)
 	{
+		CHARGE_STATE_LED_OFF;
 		WPC_Function_Status.Hold_Ploss_FOD_Flag = TRUE;
 		PLOSS_FOD_Alarm_Count = CLEAR;
 		//TEST_TP3 = 0;

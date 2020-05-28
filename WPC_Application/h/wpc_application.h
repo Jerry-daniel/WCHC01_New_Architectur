@@ -13,7 +13,6 @@
 //#define _MCU_VDD_3V3_
 //#define _P9261_PROGRAMMING_MODE_
 //#define _WPC_PCBA_VER_1_2_
-//#define _OPENFOD_LONG_TIME_
 //#define _USED_P9261_INTERNAL_TEMPERATURE_STATUS_
 //===============================================================================//
 /***********************************************************************************************************************
@@ -132,10 +131,9 @@ struct WPC_FUNCTION_STATUS_FLAG
 	unsigned int	Exception_Handing_Flag				:1;
 	unsigned int	Hold_Open_FOD_Flag					:1;
 	unsigned int	Hold_Ploss_FOD_Flag					:1; // 20200514 //
-	//unsigned int	First_Open_FOD_Flag					:1;
-	//unsigned int	First_Ploss_FOD_Flag				:1;	// 20200514 //
 	unsigned int	Charge_Load_In_Tx_Flag				:1;
-	unsigned int 	Reserved							:3;
+	unsigned int	Charge_Buzzer_Trigger_End_Flag		:1;
+	unsigned int 	Reserved							:2;
 };
 extern struct WPC_FUNCTION_STATUS_FLAG WPC_Function_Status;
 

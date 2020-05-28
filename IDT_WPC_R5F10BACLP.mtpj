@@ -2378,7 +2378,6 @@ Buzzer_Task\h
       <DebuggerProperty-EssentialProperty-Clock-MonitorClock>System</DebuggerProperty-EssentialProperty-Clock-MonitorClock>
       <DebuggerProperty-EssentialProperty-TargetConnect-TargetSupplyPower>No</DebuggerProperty-EssentialProperty-TargetConnect-TargetSupplyPower>
       <DebuggerProperty-EssentialProperty-TargetConnect-TargetSuppliedVoltage>Use3_3V</DebuggerProperty-EssentialProperty-TargetConnect-TargetSuppliedVoltage>
-      <DebuggerProperty-EssentialProperty-EmulatorConnect-SerialNumber />
       <DebuggerProperty-EssentialProperty-HotPlugin-RetryingInterval>1000</DebuggerProperty-EssentialProperty-HotPlugin-RetryingInterval>
       <DebuggerProperty-EssentialProperty-HotPlugin-NumberOfTimesOfRetrying>3</DebuggerProperty-EssentialProperty-HotPlugin-NumberOfTimesOfRetrying>
       <DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-Length>1</DebuggerProperty-DownloadProperty-DebugInformation-DownloadFiles-Length>
@@ -2410,7 +2409,7 @@ Buzzer_Task\h
       <DebuggerProperty-OptionalProperty-Register-UpdateDisplayInExecutionForPC>No</DebuggerProperty-OptionalProperty-Register-UpdateDisplayInExecutionForPC>
       <DebuggerProperty-OptionalProperty-Register-UpdateIntervalForPC>500</DebuggerProperty-OptionalProperty-Register-UpdateIntervalForPC>
       <DebuggerProperty-OptionalProperty-Memory-VerifyCheck>Yes</DebuggerProperty-OptionalProperty-Memory-VerifyCheck>
-      <DebuggerProperty-OptionalProperty-AccessMemory-PermitToStopAndRead>No</DebuggerProperty-OptionalProperty-AccessMemory-PermitToStopAndRead>
+      <DebuggerProperty-OptionalProperty-AccessMemory-PermitToStopAndRead>Yes</DebuggerProperty-OptionalProperty-AccessMemory-PermitToStopAndRead>
       <DebuggerProperty-OptionalProperty-AccessMemory-UpdateDisplayInExecution>Yes</DebuggerProperty-OptionalProperty-AccessMemory-UpdateDisplayInExecution>
       <DebuggerProperty-OptionalProperty-AccessMemory-UpdateInterval>500</DebuggerProperty-OptionalProperty-AccessMemory-UpdateInterval>
       <DebuggerProperty-OptionalProperty-Break-BreakpointPriority>SoftwareBreak</DebuggerProperty-OptionalProperty-Break-BreakpointPriority>
@@ -2437,6 +2436,7 @@ Buzzer_Task\h
       <DebuggerProperty-HookProperty-HookTransaction-Broke-Length>0</DebuggerProperty-HookProperty-HookTransaction-Broke-Length>
       <DebuggerProperty-HookProperty-HookTransaction-Connected-Length>0</DebuggerProperty-HookProperty-HookTransaction-Connected-Length>
       <DebuggerProperty-HookProperty-HookTransaction-Disconnecting-Length>0</DebuggerProperty-HookProperty-HookTransaction-Disconnecting-Length>
+      <DebuggerProperty-EssentialProperty-EmulatorConnect-SerialNumber />
     </Instance>
   </Class>
   <Class Guid="9f7af90c-526c-4f28-af29-524df208b9e0">
@@ -4072,11 +4072,11 @@ Buzzer_Task\h
       <KeyMacGridData104>Free,-,-,,</KeyMacGridData104>
       <KEY_SAVE_ALLOCATED_FUNCTION>False</KEY_SAVE_ALLOCATED_FUNCTION>
       <KEY_SAVE_DEVICE_PIN_LIST_ZOOM>100</KEY_SAVE_DEVICE_PIN_LIST_ZOOM>
-      <KEY_SAVE_COLUMN_WIDTH_PIN_NUMBER>0:78:78,1:77:77,2:400:400,3:61:61,4:40:40,5:50:50,6:160:160,7:210:210,8:210:210,9:210:210,10:100:100</KEY_SAVE_COLUMN_WIDTH_PIN_NUMBER>
-      <KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>0:98:98,1:157:157,2:42:42,3:44:44,4:121:121,5:120:120,6:85:85</KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>
-      <KEY_SAVE_COLUMN_WIDTH_MACRO_CHILD>0:98:98,1:77:77,2:77:77,3:400:400,4:61:61,5:40:40,6:50:50,7:160:160,8:210:210,9:210:210,10:210:210,11:100:100</KEY_SAVE_COLUMN_WIDTH_MACRO_CHILD>
-      <KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>0:98:98,1:100:100,2:43:43,3:150:150</KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>
-      <KEY_SAVE_COLUMN_WIDTH_EXTERNAL_CHILD>0:98:98,1:78:78,2:77:77,3:400:400,4:61:61,5:40:40,6:50:50,7:160:160,8:210:210,9:210:210,10:210:210</KEY_SAVE_COLUMN_WIDTH_EXTERNAL_CHILD>
+      <KEY_SAVE_COLUMN_WIDTH_PIN_NUMBER>0:78:78,1:77:77,2:400:400,3:61:61,4:40:40,5:50:50,6:160:160,7:210:210,8:198:210,9:210:210,10:100:100</KEY_SAVE_COLUMN_WIDTH_PIN_NUMBER>
+      <KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>0:92:98,1:157:157,2:42:42,3:44:44,4:121:121,5:115:120,6:84:85</KEY_SAVE_COLUMN_WIDTH_MACRO_PARENT>
+      <KEY_SAVE_COLUMN_WIDTH_MACRO_CHILD>0:92:98,1:77:77,2:77:77,3:400:400,4:61:61,5:40:40,6:50:50,7:160:160,8:210:210,9:198:210,10:210:210,11:100:100</KEY_SAVE_COLUMN_WIDTH_MACRO_CHILD>
+      <KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>0:92:98,1:100:100,2:43:43,3:144:150</KEY_SAVE_COLUMN_WIDTH_EXTERNAL_PARENT>
+      <KEY_SAVE_COLUMN_WIDTH_EXTERNAL_CHILD>0:92:98,1:78:78,2:77:77,3:400:400,4:61:61,5:40:40,6:50:50,7:160:160,8:210:210,9:198:210,10:210:210</KEY_SAVE_COLUMN_WIDTH_EXTERNAL_CHILD>
     </Instance>
     <Instance Guid="aacae7da-f24b-4709-81fa-541016e73641">
       <KeyTopViewZoom>1</KeyTopViewZoom>
@@ -4444,7 +4444,7 @@ Buzzer_Task\h
     &lt;/RTC1HZ&gt;
     &lt;RXD0 Name="RXD0" Text="disable" /&gt;
     &lt;ProjectName Name="PrjName" Text="IDT_WPC_R5F10BACLP" /&gt;
-    &lt;ProjectPath Name="PrjPath" Text="D:\Renesas_Code\Wireless_Charging\IDT_Ver\IDT_WPC_R5F10BACLP_2020514_New_Architectur" /&gt;
+    &lt;ProjectPath Name="PrjPath" Text="D:\Renesas_Code\Wireless_Charging\IDT_Ver\IDT_WPC_R5F10BACLP_2020527_New_Architectur" /&gt;
     &lt;ProjectKind Name="PrjKind" Text="Project78K0R" /&gt;
     &lt;DeviceName Name="DeviceName" Fixed="" Text="RL78F13" /&gt;
     &lt;MCUName Name="MCUName" Text="RL78F13_30pin" /&gt;
@@ -5563,27 +5563,27 @@ Buzzer_Task\h
         &lt;cg_ocd_trace Name="cg_ocd_trace" Value="FE300" /&gt;
         &lt;cg_security9 Name="cg_security9" Value="00" /&gt;
         &lt;cg_security7 Name="cg_security7" Value="00" /&gt;
+        &lt;pior_value7 Name="pior_value7" Value="00" /&gt;
         &lt;cg_security5 Name="cg_security5" Value="00" /&gt;
         &lt;cg_crc_area Name="cg_crc_area" Value="00" /&gt;
+        &lt;rrm Name="rrm" Value="1FE00" /&gt;
         &lt;cg_security3 Name="cg_security3" Value="00" /&gt;
         &lt;cg_security0 Name="cg_security0" Value="00" /&gt;
         &lt;pior_value5 Name="pior_value5" Value="00" /&gt;
         &lt;cg_security1 Name="cg_security1" Value="00" /&gt;
-        &lt;wdt_option Name="wdt_option" Value="F9" /&gt;
+        &lt;cg_ocd_ram_size Name="cg_ocd_ram_size" Value="512" /&gt;
         &lt;cg_ocd_trace_size Name="cg_ocd_trace_size" Value="512" /&gt;
         &lt;clock_option Name="clock_option" Value="E8" /&gt;
-        &lt;lvi_option Name="lvi_option" Value="FF" /&gt;
-        &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
         &lt;cg_option Name="cg_option" Value="84" /&gt;
         &lt;cg_security8 Name="cg_security8" Value="00" /&gt;
         &lt;cg_security6 Name="cg_security6" Value="00" /&gt;
         &lt;ocdstart Name="ocdstart" Value="07E00" /&gt;
         &lt;cg_onchip Name="cg_onchip" Value="" /&gt;
-        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
+        &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
         &lt;cg_iawctl_value Name="cg_iawctl_value" Value="00" /&gt;
-        &lt;cg_ocd_ram_size Name="cg_ocd_ram_size" Value="512" /&gt;
-        &lt;pior_value7 Name="pior_value7" Value="00" /&gt;
-        &lt;rrm Name="rrm" Value="1FE00" /&gt;
+        &lt;lvi_option Name="lvi_option" Value="FF" /&gt;
+        &lt;wdt_option Name="wdt_option" Value="F9" /&gt;
+        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
       &lt;/GlobleUserTag&gt;
     &lt;/TAG&gt;
   &lt;/DIR&gt;

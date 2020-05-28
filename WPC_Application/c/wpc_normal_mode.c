@@ -51,8 +51,7 @@ void WPC_Normal_Task(void)
 	if(WPC_System.Normal_Mode==TRUE)
 	{
 		WPC_System.Normal_Mode = FALSE;
-		//Last_P9261_Tx_State_Code = 0xFF;
-		//Last_P9261_Tx_Status_Code = 0xFF;
+		Last_Charge_Load_On_Tx = CLEAR;
 		CHARGE_ENABLE;
 		//TEST_TP3 = 1;
 		P9261_IIC_State.active_flag = TRUE;

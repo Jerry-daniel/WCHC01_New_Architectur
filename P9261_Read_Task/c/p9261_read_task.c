@@ -333,7 +333,7 @@ void Receive_P9261_Tx_Status_Task(unsigned char P9261_TX_STATUS)
 				//if((Buzzer_State.Buzzer_Working_End_Flag==TRUE)&&(LED_Status.LED_Working_End_Flag==TRUE))
 				//{
 					P9261_TxStatus_Message.Open_FOD_Alarm_Status = TRUE;
-					//TEST_TP2 = 1;
+					TEST_TP2 = 1;
 				//}
 				/*else
 				{

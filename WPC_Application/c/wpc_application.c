@@ -136,6 +136,7 @@ void WPC_Sleep_Reset(void)
 	Clear_P9261_Combined_State_Flag(&P9261_CombinedMessage);
 	*/
 	IDT_WPC_TASK = IDT_WPC_STARTUP_TASK;
+	WPC_Function_Status.Charge_Buzzer_Trigger_End_Flag = FALSE; //20200527 modify//
 	WPC_Function_Status.P9261_State_Update_End_Flag = TRUE;
 }
 /***********************************************************************************************************************
@@ -252,6 +253,7 @@ void WPC_System_Initial(void)
 	WPC_MODE_CASE = WPC_SHUTDOWN_MODE;
 	WPC_NEXT_MODE_CASE = WPC_MODE_CASE;
 	IDT_WPC_TASK = IDT_WPC_STARTUP_TASK;
+	WPC_Function_Status.Charge_Buzzer_Trigger_End_Flag = FALSE; //20200527 modify//
 	WPC_Function_Status.Forget_Remove_End_Flag = TRUE;
 	WPC_Function_Status.Ploss_Remove_End_Flag = TRUE;
 	WPC_Function_Status.P9261_State_Update_End_Flag = TRUE;

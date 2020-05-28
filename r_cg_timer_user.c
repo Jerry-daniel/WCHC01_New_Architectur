@@ -94,20 +94,24 @@ static void __near r_tau0_channel1_interrupt(void)
     /* Start user code. Do not edit comment generated here */
 	if(WPC_Function_Status.IDT_Program_Debug_Mode_Flag==FALSE)
 	{
-		/*if(Power_Sw.Active_Flag==TRUE)
-		{
-			if(WPC_Function_Status.P9261_ReStart_End_Flag==FALSE)
-			{
-				P9261_Restart_Init();
-			}
-		}*/
-		//if(UVOL_Wait_Time!=CLEAR)							{UVOL_Wait_Time--;}
-		//if(WPC_Function_Status.EUT_Wait_Time_Flag==TRUE)	{if(EUT_Waitting_Time!=CLEAR){EUT_Waitting_Time--;}}
 		if(WPC_Function_Status.ACC_Off_Dly3_5T_Flag==TRUE)	{if(ACC_Off_Reset_Time!=CLEAR){ACC_Off_Reset_Time--;}}
 		if(Over_Temperature_Reset_Time!=CLEAR)				{Over_Temperature_Reset_Time--;}
 		if(Read_I2C_Data_Duty_Time!=CLEAR)					{Read_I2C_Data_Duty_Time--;}
 		if(Read_Next_Register_Delay_Time!=CLEAR)			{Read_Next_Register_Delay_Time--;}
 		if(System_Init_Time!=CLEAR)							{System_Init_Time--;}
+		
+		//----- 20200527 modify -------//
+		if(WPC_Function_Status.Charge_Buzzer_Trigger_End_Flag==FALSE)
+		{
+			if((P9261_TX_STATE_MSG==0x05)||(P9261_TX_STATE_MSG==0x07)||(P9261_TX_STATE_MSG==0x09))
+			{
+				WPC_Function_Status.Charge_Buzzer_Trigger_End_Flag = TRUE;
+				Reset_Buzzer_LED_State();
+				Charge_Starting_Buzzer_Out();
+				CHARGE_LED_ON;
+			}
+		}
+		//----- 20200527 modify -------//
 	}
 	else
 	{
@@ -132,7 +136,7 @@ static void __near r_tau1_channel0_interrupt(void)
 		if(Buzzer_State.Error_Alarm_Active_Flag==TRUE)		{Error_Alarm_Buzzer_Task();}
 		if(Buzzer_State.Forget_Alarm_Active_Flag==TRUE)		{PhoneForger_Buzzer_Task();}
 		if(LED_Status.Alarm_LED_Active_Flag==TRUE)			{Error_LED_Flash_Task();}
-		if(LED_Status.Warring_LED_Active_Flag==TRUE)		
+		/*if(LED_Status.Warring_LED_Active_Flag==TRUE)		
 		{
 			if(P9261_Reg_State.TX_STATUS_MESSAGE==STATUS_over_temperature_rx_ept_code)
 			{
@@ -143,7 +147,7 @@ static void __near r_tau1_channel0_interrupt(void)
 				CHARGE_STATE_LED_OFF;
 				LED_Status.Warring_LED_Active_Flag = FALSE;
 			}
-		}
+		}*/
 		Buzzer_Cycle_Delay();
 	}
     /* End user code. Do not edit comment generated here */
